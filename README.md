@@ -7,7 +7,7 @@
 - Install three.js in the public folder (npm i three)
 - npm run start to start with webpack & compressed assets
 - npm run devstart to fast start
-- [text](http://localhost:3334/)
+- [Lancer projet](http://localhost:3334/)
 
 ## Credits
 - MiamoAlex [Website](https://miamoalex.net/)
