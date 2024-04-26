@@ -1,6 +1,6 @@
 ![Cover Image](public/assets/logo.png)
 
-## Reach for the stars in this 90s flash warioware-like !
+## Reach for the stars in this 00s flash inspired warioware-like !
  Thank you for playing Gleep Gym! This game was created as part of the GameDev.JS 2024 jam in 13 days with the theme 'POWER'. <br> <br> The game and the website www.gleep-gym.club do not use cookies for tracking and analysis, do not rely on advertising, and do not share information with third parties. <br><br> A sequence in the game contains visual effects that may trigger epileptic seizures in some individuals, so please play with caution and consult a healthcare professional if you experience any symptoms.
 
 ## Installation
