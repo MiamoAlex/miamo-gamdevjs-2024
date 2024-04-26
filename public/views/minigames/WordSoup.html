@@ -1,0 +1,31 @@
+<style>
+    .wordsoup {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/wordsoup/background.png');
+        background-size: 100% 100%;
+        isolation: isolate;
+    }
+
+    .wordsoup__letter {
+        width: 5%;
+        bottom: 40%;
+        position: absolute;
+        transition: bottom 400ms, right 400ms, transform 600ms 600ms;
+    }
+
+    .wordsoup__letter-active {
+        right: 80%!important;
+        bottom: 50%!important;
+        transform: scale(0);
+    }
+</style>
+
+<div class="wordsoup">
+    <div class="wordsoup__letters"></div>
+</div>

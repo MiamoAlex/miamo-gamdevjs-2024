@@ -1,0 +1,68 @@
+<style>
+    .potion {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/potion/background.jpg');
+        background-size: 100% 100%;
+    }
+
+    .potion__wizard {
+        width: 85%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+    }
+
+    .potion__ingredients {
+        width: 40%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        position: absolute;
+        left: 5%;
+        top: 10%;
+    }
+
+    .potion__ingredient {
+        width: 30%;
+
+        cursor: grab;
+    }
+
+    .potion__chaudron {
+        height: 27%;
+        width: 52%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+
+<div class="potion">
+    <img class="potion__wizard" src="assets/sprites/minigames/potion/wizard.gif" alt="wizard" draggable="false">
+    <div class="potion__ingredients">
+        <img id="ham" class="potion__ingredient" src="assets/sprites/minigames/potion/ham.gif" alt="wizard"
+            draggable="true">
+        <img id="oeuf" class="potion__ingredient" src="assets/sprites/minigames/potion/oeuf.gif" alt="wizard"
+            draggable="true">
+        <img id="burger" class="potion__ingredient" src="assets/sprites/minigames/potion/burger.gif" alt="wizard"
+            draggable="true">
+        <img id="bacon" class="potion__ingredient" src="assets/sprites/minigames/potion/bacon.gif" alt="wizard"
+            draggable="true">
+        <img id="pizza" class="potion__ingredient" src="assets/sprites/minigames/potion/pizza.gif" alt="wizard"
+            draggable="true">
+        <img id="virus" class="potion__ingredient" src="assets/sprites/minigames/potion/virus.gif" alt="wizard"
+            draggable="true">
+    </div>
+    <div class="potion__chaudron"></div>
+</div>

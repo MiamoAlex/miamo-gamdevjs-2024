@@ -1,0 +1,67 @@
+<style>
+    .gems {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: bottom;
+        gap: 3rem;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/gem/bg.png');
+        background-size: 100% 100%;
+        cursor: none;
+    }
+
+    .shake {
+        animation: shake linear forwards 80ms;
+    }
+
+    .gems__gem {
+        transform-origin: bottom;
+        transition: transform 800ms;
+        width: 30%;
+    }
+
+    @keyframes shake {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(15deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        75% {
+            transform: rotate(-5deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .gems__pickaxe {
+        position: absolute;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    .gems__trumpet {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        animation: floating infinite 300ms;
+    }
+</style>
+
+<div class="gems">
+    <img class="gems__pickaxe" src="assets/sprites/minigames/gem/pickaxe.png" alt="personne" draggable="false">
+    <img class="gems__gem" src="assets/sprites/minigames/gem/gemFull.png" alt="gemme" draggable="false">
+    <img class="gems__trumpet hide" src="assets/sprites/minigames/gem/trompette.png" alt="la jolie trompette" draggable="false">
+</div>

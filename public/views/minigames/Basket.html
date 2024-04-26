@@ -1,0 +1,36 @@
+<style>
+    .basket {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        transform-origin: bottom;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/basket/bg.jpg');
+        transition: background-image 2s;
+        background-size: 100% 100%;
+    }
+
+    .basket__person {
+        position: absolute;
+        right: 21%;
+        width: 40%;
+        bottom: 0%;
+        transition: opacity 2000ms;
+    }
+
+    .basket__ball {
+        width: 15%;
+        position: absolute;
+        top: 18%;
+        cursor: url(../assets/sprites/pointer.cur), pointer;
+        left: 32%;
+        transition: opacity 2000ms;
+    }
+</style>
+
+<div class="basket">
+    <img draggable="false" src="assets/sprites/minigames/basket/characterStatic.png" alt="basket !!"
+        class="basket__person">
+    <img draggable="false" src="assets/sprites/minigames/basket/ballStatic.png" alt="basket !!" class="basket__ball">
+</div>

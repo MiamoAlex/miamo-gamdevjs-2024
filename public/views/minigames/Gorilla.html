@@ -1,0 +1,70 @@
+<style>
+    .gorilla {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        transform-origin: bottom;
+        gap: 3rem;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/gorilla/background.jpg');
+        background-size: 100% 100%;
+    }
+
+    .shake {
+        animation: shake linear forwards 80ms;
+    }
+
+    .gorilla__gorilla {
+        transform-origin: bottom;
+        position: absolute;
+        left: 10%;
+        bottom: 5%;
+    }
+
+    .gorilla__person {
+        width: 11%;
+        position: absolute;
+        right: 10%;
+        bottom: 5%;
+    }
+
+    @keyframes shake {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(5deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        75% {
+            transform: rotate(-5deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .gorilla__press {
+        transform: scaleY(0.8);
+    }
+
+    .gorilla__tutorial {
+        position: absolute;
+        bottom: 0;
+        width: 25%;
+    }
+</style>
+
+<div class="gorilla">
+    <img class="gorilla__gorilla" src="assets/sprites/minigames/gorilla/harambestill.png" alt="gorille"
+        draggable="false">
+    <img class="gorilla__person" src="assets/sprites/minigames/gorilla/homme.png" alt="personne" draggable="false">
+    <img class="gorilla__tutorial" src="assets/sprites/minigames/gorilla/tutorial.gif" alt="personne" draggable="false">
+</div>

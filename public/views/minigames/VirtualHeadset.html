@@ -1,0 +1,96 @@
+<style>
+    .virtualheadset {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/virtualheadset/background.jpg');
+        background-size: 100% 100%;
+    }
+
+    .virtualheadset__player {
+        width: 70%;
+        height: 40%;
+        background-image: url('assets/sprites/minigames/virtualheadset/mrmou.gif');
+        background-size: 100% 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .virtualheadset__items {
+        width: 100%;
+        height: 20%;
+        background-image: url('assets/sprites/minigames/virtualheadset/fg.gif');
+        background-size: 100% 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .virtualheadset__item {
+        width: 10vw;
+        cursor: grab;
+        aspect-ratio: 1 / 1;
+    }
+
+    .virtualheadset__slot {
+        width: 10vw;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    [data-item="leftGlove"] {
+        position: absolute;
+        left: -10%;
+        top: -23px;
+    }
+
+    [data-item="rightGlove"] {
+        position: absolute;
+        right: -10%;
+        top: -23px;
+    }
+
+    [data-item="goggles"] {
+        position: absolute;
+        top: -20%;
+        left: 2%;
+        right: 0;
+        width: 15vw;
+        aspect-ratio: 1.2/1;
+        margin: auto;
+    }
+
+    #goggles {
+        aspect-ratio: 1.75/1;
+        width: 15vw;
+    }
+</style>
+
+<div class="virtualheadset">
+    <div class="virtualheadset__items">
+        <img id="leftGlove" src="assets/sprites/minigames/virtualheadset/leftGlove.gif" alt="gan gauch"
+            class="virtualheadset__item">
+        <img id="rightGlove" src="assets/sprites/minigames/virtualheadset/rightGlove.gif" alt="gan droit"
+            class="virtualheadset__item">
+        <img id="goggles" src="assets/sprites/minigames/virtualheadset/goggles.gif" alt="lunet"
+            class="virtualheadset__item">
+    </div>
+    <div class="virtualheadset__player">
+        <div class="virtualheadset__slot" data-item="leftGlove"></div>
+        <div class="virtualheadset__slot" data-item="rightGlove"></div>
+        <div class="virtualheadset__slot" data-item="goggles"></div>
+    </div>
+</div>

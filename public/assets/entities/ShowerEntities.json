@@ -1,0 +1,90 @@
+{
+  "backtrack": "Office",
+  "playerSpawn": { "x": 0, "y": 0.67, "z": 0 },
+  "mapPos": { "x": 36.5, "y": 56.5 },
+  "cameraPos": { "x": 4, "y": 0.5, "z": 2 },
+  "cameraRot": {
+    "x": -0.4783912716750055,
+    "y": 0.846425496558357,
+    "z": 0.370435257463189
+  },
+  "ost": "music/gleepGymShower",
+  "background": "greysky.jpg",
+  "materials": {
+    "wood": { "map": "wood.png" },
+    "door": { "map": "door.jpg", "wrap": { "x": 1, "y": 1 } }
+  },
+  "models": [
+    { "name": "earth" },
+    { "name": "plane" },
+    { "name": "ShowerRoom" }
+  ],
+  "videos": [{ "name": "janitor" }],
+  "entities": {
+    "layout": [
+      {
+        "model": "ShowerRoom",
+        "position": {
+          "x": 0,
+          "y": 0.2,
+          "z": 0
+        }
+      }
+    ],
+    "entities": [
+      {
+        "model": "plane",
+        "material": "door",
+        "trigger": "door",
+        "map": "Office",
+        "position": { "x": 3, "y": 0.9, "z": -2 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 0.3, "y": 0.3, "z": 0.3 }
+      },
+      {
+        "model": "plane",
+        "material": "door",
+        "trigger": "door",
+        "map": "Lobby",
+        "position": { "x": -3.9, "y": 0.9, "z": 0 },
+        "rotation": { "x": 0, "y": 90, "z": 0 },
+        "scale": { "x": 0.3, "y": 0.3, "z": 0.3 }
+      }
+    ],
+    "characters": [
+      {
+        "model": "plane",
+        "material": "janitor",
+        "position": {
+          "x": 1.5,
+          "y": 0.6,
+          "z": 1.9000000000000001
+        },
+        "rotation": {
+          "x": 0.05464026649892657,
+          "y": 80.059411467660002,
+          "z": 0.054711144310276155
+        },
+        "scale": {
+          "x": 0.2,
+          "y": 0.2,
+          "z": 0.2
+        },
+        "trigger": "dialog",
+        "dialog": "janitor",
+        "lines": [
+          {
+            "portrait": "sprites/portrait.png",
+            "fr": "*parle en microonde* ça fait 3 jours qu'on me demande de nettoyer les vestiaires mais personne n'y passe...",
+            "en": "*speaks in microwave* it's been 3 days since i was asked to clean the locker room but no one goes there..."
+          },
+          {
+            "portrait": "sprites/portrait.png",
+            "fr": "ben si ya moi bonjour",
+            "en": "well i am here"
+          }
+        ]
+      }
+    ]
+  }
+}

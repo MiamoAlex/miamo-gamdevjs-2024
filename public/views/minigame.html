@@ -1,0 +1,38 @@
+<section class="minigame">
+    <div class="minigame__core">
+        <div class="minigame__stats">
+            <span class="minigame__progress">15/15</span>
+            <span class="minigame__lives"></span>
+        </div>
+        <span class="minigame__objective"></span>
+        <div class="minigame__game">
+            <div class="minigame__target"></div>
+            <div class="minigame__chronometre hide" id="timer">10</div>
+
+            <div class="minigame__message hide"></div>
+        </div>
+        <div class="minigame__ending hide">
+            <img draggable="false" src="assets/sprites/rankFrame.png" alt="Animation de fin"
+                class="minigame__ending-img">
+            <img draggable="false" src="assets/sprites/rankFrame.png" alt="Animation de fin"
+                class="minigame__ending-start hide">
+            <img draggable="false" src="assets/sprites/rankFrame.png" alt="Animation de fin"
+                class="minigame__ending-idle hide">
+            <div class="minigame__ending-ranking">
+                <img src="assets/sprites/rankS.png" alt="SUPER RANK" class="minigame__ending-rank">
+                <span class="minigame__ending-stats">5/5 reussis</span>
+                <span class="minigame__ending-time">10.1s</span>
+                <div class="minigame__ending-bottom">
+                    <span class="minigame__ending-retry" data-i18n="serie">Rejouer la série</span>
+                    <span class="minigame__ending-quit" data-i18n="salle">Retour à la salle</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="minigame__theater">
+        <div class="minigame__back"></div>
+        <canvas class="minigame__canvas"></canvas>
+        <img src="assets/sprites/placeholderEnnemy.gif" alt="le mechant" class="minigame__decoration">
+        <img src="assets/sprites/flabbyIdle.gif" alt="le mechant" class="minigame__decoration minigame__sprite">
+    </div>
+</section>

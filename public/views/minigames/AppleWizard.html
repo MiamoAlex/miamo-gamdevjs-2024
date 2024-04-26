@@ -1,0 +1,64 @@
+<style>
+    .applewizard {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/applewizard/background.gif');
+        background-size: 100% 100%;
+    }
+
+    .applewizard__wizard {
+        width: 85%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .applewizard__apple {
+        width: 55%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .applewizard__sequence {
+        position: absolute;
+        top: 19%;
+        left: 10%;
+        width: 39%;
+        font-size: 2.5rem;
+        color: #fff;
+        mix-blend-mode: difference;
+        text-align: center;
+    }
+
+    .applewizard__input {
+        position: absolute;
+        bottom: 9%;
+        left: 7%;
+        font-size: 2rem;
+        color: #000000;
+        z-index: 10;
+        width: 40%;
+        text-align: center;
+    }
+    .applewizard__gameover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+</style>
+
+<div class="applewizard">
+    <span class="applewizard__sequence"></span>
+    <span class="applewizard__input"></span>
+    <img class="applewizard__wizard" src="assets/sprites/minigames/applewizard/sorcier.gif" alt="sorcier pomme">
+    <img class="applewizard__apple" src="assets/sprites/minigames/applewizard/apple.gif" alt="sorcier pomme">
+    <img class="applewizard__gameover hide" src="assets/sprites/minigames/applewizard/gameover.gif" alt="game over">
+</div>

@@ -1,0 +1,69 @@
+<style>
+    .sandwichpied {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/sandwichpied/background.gif');
+        background-size: 100% 100%;
+        isolation: isolate;
+        cursor: none;
+    }
+
+    .sandwichpied * {
+        cursor: none;
+    }
+
+    .sandwichpied__tapette {
+        position: absolute;
+        pointer-events: none;
+        z-index: 10;
+        width: 70%;
+    }
+
+    .sandwichpied__fly {
+        position: absolute;
+    }
+
+    .sandwichpied__sands {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 25%;
+    }
+
+    .sandwichpied__sandwich {
+        width: 25%;
+        position: absolute;
+    }
+
+    .sandwichpied__1 {
+        left: 0;
+    }
+    .sandwichpied__2 {
+        left: 20%;
+    }
+    .sandwichpied__3 {
+        left: 50%;
+    }
+    .sandwichpied__4 {
+        left: 80%;
+    }
+</style>
+
+<div class="sandwichpied">
+    <img src="assets/sprites/minigames/sandwichpied/pied.gif" alt="meow" class="sandwichpied__tapette"
+        draggable="false">
+    <div class="sandwichpied__sands">
+        <img src="assets/sprites/minigames/sandwichpied/sandwich.gif" alt="sandwich" class="sandwichpied__1 sandwichpied__sandwich">
+        <img src="assets/sprites/minigames/sandwichpied/sandwich.gif" alt="sandwich" class="sandwichpied__2 sandwichpied__sandwich">
+        <img src="assets/sprites/minigames/sandwichpied/sandwich.gif" alt="sandwich" class="sandwichpied__3 sandwichpied__sandwich">
+        <img src="assets/sprites/minigames/sandwichpied/sandwich.gif" alt="sandwich" class="sandwichpied__4 sandwichpied__sandwich">
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<style>
+    .truck {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        transform-origin: bottom;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/truck/bg.jpg');
+        background-size: 100% 100%;
+        padding-bottom: -10rem;
+          cursor: url("../assets/sprites/pointer.cur"), pointer;
+
+    }
+
+    .truck__truck {
+        width: 60%;
+        margin-bottom: -3rem;
+        z-index: 10;
+    }
+
+    .truck__plant {
+        height: 10%;
+        object-fit: contain;
+        transform-origin: bottom;
+        transition: height 300ms, width 300ms;
+    }
+</style>
+
+<div class="truck">
+    <img class="truck__truck" src="assets/sprites/minigames/truck/truck.png" alt="personne" draggable="false">
+    <img class="truck__plant" src="assets/sprites/minigames/truck/tree1.png" alt="arbre" draggable="false">
+</div>

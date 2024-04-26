@@ -1,0 +1,51 @@
+<style>
+    .pushup {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        transform-origin: bottom;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/pushup/bg.png');
+        background-size: 100% 100%;
+    }
+
+    .pushup__press {
+        transform: scaleY(0.8);
+    }
+
+    .pushup__person {
+        position: absolute;
+        right: 24%;
+        bottom: 14%;
+        width: 30%;
+    }
+
+    .pushup__coach {
+        position: absolute;
+        bottom: 6%;
+        left: 8%;
+        width: 25%;
+        transform: scale(0.8);
+    }
+
+    .pushup__bubble {
+        background-image: url('assets/sprites/minigames/pushup/bubble.gif');
+        background-size: 100% 100%;
+        position: absolute;
+        top: 18%;
+        left: 27%;
+        line-height: 15%;
+        height: 4rem;
+        line-height: 4rem;
+        font-size: 1.5rem;
+        aspect-ratio: 1.5/1;
+        color: #000;
+    }
+</style>
+
+<div class="pushup">
+    <div class="pushup__bubble"></div>
+    <img draggable="false" src="assets/sprites/minigames/pushup/coach.gif" alt="pushup !!" class="pushup__coach">
+    <img draggable="false" src="assets/sprites/minigames/pushup/character2.png" alt="pushup !!" class="pushup__person">
+</div>

@@ -1,0 +1,56 @@
+<style>
+    .spacewash {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: bottom;
+        gap: 3rem;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/spacewash/bg.png');
+        background-size: 100% 100%;
+    }
+
+    .spacewash__sponge {
+        position: absolute;
+        z-index: 10;
+        pointer-events: none;
+        width: 15%;
+    }
+
+    .spacewish__ship {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .spacewash__dirty,
+    .spacewash__clean {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+    }
+
+    .spacewash__win {
+        position: absolute;
+        z-index: 10;
+        width: 20%;
+        top: 3%;
+        left: 3%;
+    }
+</style>
+
+<div class="spacewash">
+    <img class="spacewash__sponge" src="assets/sprites/minigames/spacewash/sponge.png" alt="EPONGEUR FOU"
+        draggable="false"> 
+        <img class="spacewash__win hide" src="assets/sprites/minigames/spacewash/clean.png" alt="EPONGEUR FOU" draggable="false">
+    <div class="spacewash__ship">
+        <img class="spacewash__clean" src="assets/sprites/minigames/spacewash/ufoClean.png" alt="vaisseau propre"
+            draggable="false">
+        <img class="spacewash__dirty" src="assets/sprites/minigames/spacewash/ufoDirty.png" alt="vaisseau sale"
+            draggable="false">
+    </div>
+</div>

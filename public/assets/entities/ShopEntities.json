@@ -1,0 +1,76 @@
+{
+  "backtrack": "Office",
+  "playerSpawn": {
+    "x": 1.2048435491013607,
+    "y": 0.67,
+    "z": 1.9914453840014101
+  },
+  "cameraPos": { "x": 4, "y": 1.5, "z": -2 },
+  "mapPos": { "x": 49, "y": 53.5 },
+  "cameraRot": {
+    "x": -2.623245056666149,
+    "y": 0.8578784800866095,
+    "z": 2.7342630315475973
+  },
+  "background": "money.jpg",
+  "materials": {
+    "wood": { "map": "wood.png" },
+    "door": { "map": "door.jpg", "wrap": { "x": 1, "y": 1 } }
+  },
+  "videos": [{ "name": "bizaroid" }],
+  "models": [{ "name": "plane" }, { "name": "ShopRoom" }],
+  "entities": {
+    "layout": [
+      {
+        "model": "ShopRoom",
+        "id": "shopRoom",
+        "position": {
+          "x": 0,
+          "y": 0.2,
+          "z": 0
+        },
+        "scale": { "x": 0.85, "y": 1, "z": 1 }
+      }
+    ],
+    "entities": [
+      {
+        "model": "plane",
+        "material": "door",
+        "trigger": "door",
+        "map": "Office",
+        "position": {
+          "x": 1.2459976361952325,
+          "y": 0.9,
+          "z": 2.99
+        },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 0.3, "y": 0.3, "z": 0.3 }
+      }
+    ],
+    "characters": [
+      {
+        "model": "plane",
+        "material": "bizaroid",
+        "name": "bizaroid",
+        "id": "bizaroid",
+
+        "trigger": "shop",
+        "position": {
+          "x": 2.3000000000000003,
+          "y": 0.75,
+          "z": -1.1
+        },
+        "rotation": {
+          "x": 0,
+          "y": -45.6590534860725421,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.3579627338022962,
+          "y": 0.21264988951429437,
+          "z": 0.25
+        }
+      }
+    ]
+  }
+}

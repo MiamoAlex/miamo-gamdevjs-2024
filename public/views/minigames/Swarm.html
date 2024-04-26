@@ -1,0 +1,66 @@
+<style>
+    .swarm {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/swarm/background.png');
+        background-size: 100% 100%;
+        isolation: isolate;
+        cursor: none;
+    }
+
+    .swarm * {
+        cursor: none;
+    }
+
+    .swarm__homme {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+        bottom: 10%;
+        z-index: -1;
+        width: 30%;
+    }
+
+    .swarm__eprouvette {
+        position: absolute;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .swarm__fly {
+        position: absolute;
+        animation: zigzag 12s linear infinite;
+    }
+
+    @keyframes zigzag {
+        0% {
+            transform: translateX(-5vw) translateY(0);
+        }
+
+        25% {
+            transform: translateX(5vw) translateY(-5vw);
+        }
+
+        50% {
+            transform: translateX(12vw) translateY(0);
+        }
+
+        75% {
+            transform: translateX(20vw) translateY(5vw);
+        }
+
+        100% {
+            transform: translateX(35vw) translateY(0);
+        }
+    }
+</style>
+
+<div class="swarm">
+    <img src="assets/sprites/minigames/swarm/eprouvette.gif" alt="meow" class="swarm__eprouvette" draggable="false">
+</div>

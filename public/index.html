@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" class="theme__miamo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLEEP GYM CLUB</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./css/main.css">
+    <meta property="og:image" content="$$miamo$$">
+    <link rel="shortcut icon" href="icon.ico" type="image/png">
+</head>
+
+<body>
+    <main class="main">
+        <div class="main__content"></div>
+        <section class="main__transition"></section>
+        </section>
+    </main>
+
+    <canvas class="canvas"></canvas>
+    <div class="animatedtextures" hidden></div>
+    <div id="templates" hidden></div>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./three/build/three.module.js",
+                "three/addons/": "./three/examples/jsm/"
+            }
+        }
+    </script>
+    <script src="src/Core.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<style>
+    .levers {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        transform-origin: bottom;
+        gap: 3rem;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        background-image: url('assets/sprites/minigames/levers/background.jpg');
+        background-size: 100% 100%;
+    }
+
+    .levers__levers {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-image: url('assets/sprites/minigames/levers/machine.png');
+        background-size: 100% 100%;
+        transform-origin: bottom;
+        transition: transform 800ms;
+        list-style: none;
+        display: flex;
+        width: 47%;
+        height: 47%;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 1rem;
+        padding-top: 8%;
+    }
+
+    .levers__subject {
+        position: absolute;
+        top: 5%;
+        right: 0;
+    }
+
+    .levers__lever {
+        width: 18%;
+        height: 57%;
+          cursor: url("../assets/sprites/pointer.cur"), pointer;
+
+    }
+
+    .levers__aliens {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 58%;
+    }
+
+    .levers__person {
+        transition: transform 200ms;
+        transform-origin: bottom;
+    }
+
+    .levers__flabby {
+        position: absolute;
+        bottom: 40%;
+        right: 28%;
+        width: 15%;
+        z-index: 5;
+    }
+
+    .levers__bell {
+        position: absolute;
+        bottom: 40%;
+        right: 3%;
+        width: 15%;
+        z-index: 5;
+    }
+
+    .levers__spark {
+        position: absolute;
+        right: 10%;
+        top: 10%;
+        width: 30%;
+        z-index: 10;
+    }
+</style>
+
+<div class="levers">
+    <img class="levers__aliens" src="assets/sprites/minigames/levers/aliens.png" alt="aliens" draggable="false">
+    <img class="levers__flabby" src="assets/sprites/minigames/levers/fullBell.png" alt="aliens" draggable="false">
+    <img class="levers__bell" src="assets/sprites/minigames/levers/emptyBell.png" alt="aliens" draggable="false">
+    <img class="levers__spark hide" src="assets/sprites/minigames/levers/electricity.gif" alt="electricity" draggable="false">
+    
+    <div class="levers__levers">
+        <img class="levers__lever" src="assets/sprites/minigames/levers/levierHaut.png" alt="subject" draggable="false">
+        <img class="levers__lever" src="assets/sprites/minigames/levers/levierHaut.png" alt="subject" draggable="false">
+        <img class="levers__lever" src="assets/sprites/minigames/levers/levierHaut.png" alt="subject" draggable="false">
+        <img class="levers__lever" src="assets/sprites/minigames/levers/levierHaut.png" alt="subject" draggable="false">
+        <img class="levers__lever" src="assets/sprites/minigames/levers/levierHaut.png" alt="subject" draggable="false">
+        <img class="levers__lever" src="assets/sprites/minigames/levers/levierHaut.png" alt="subject" draggable="false">
+        <img class="levers__lever" src="assets/sprites/minigames/levers/levierHaut.png" alt="subject" draggable="false">
+        <img class="levers__lever" src="assets/sprites/minigames/levers/levierHaut.png" alt="subject" draggable="false">
+    </div>
+</div>

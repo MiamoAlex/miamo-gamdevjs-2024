@@ -1,0 +1,153 @@
+{
+  "backtrack": "EntranceCorridor",
+  "playerSpawn": {
+    "x": 0.6617832855915071,
+    "y": 0.6600440042619758,
+    "z": 1.4524195963273931
+  },
+  "mapPos": { "x": 43.5, "y": 57.5 },
+  "cameraPos": { "x": 1.5, "y": 1.9, "z": 2.5 },
+  "cameraRot": {
+    "x": -0.4104874887490684,
+    "y": 0.43664327420481525,
+    "z": 0.1820137457649138
+  },
+  "materials": {
+    "wood": { "map": "wood.png" },
+    "door": { "map": "door.jpg", "wrap": { "x": 1, "y": 1 } },
+    "lobbydoor": {
+      "map": "lobbydoor.png",
+      "wrap": { "x": 1, "y": 1 },
+      "transparent": true
+    },
+    "lobbydoorClosed": {
+      "map": "lobbydoorClosed.png",
+      "wrap": { "x": 1, "y": 1 },
+      "transparent": true
+    },
+    "golddoor": { "map": "golddoor.png", "wrap": { "x": 1, "y": 1 } },
+    "tv": {
+      "map": "officeTv.png",
+      "wrap": { "x": 1, "y": 1 },
+      "transparent": true
+    },
+    "rottendoor": {
+      "map": "rottendoor.png",
+      "wrap": { "x": 1, "y": 1 },
+      "transparent": true
+    }
+  },
+  "videos": [{ "name": "gerantIdle" }, { "name": "gerantSad" }],
+  "models": [
+    { "name": "plane" },
+    { "name": "OfficeRoom" }
+  ],
+  "entities": {
+    "layout": [
+      {
+        "model": "OfficeRoom",
+        "position": {
+          "x": 0,
+          "y": 0.2,
+          "z": 0
+        }
+      },
+      {
+        "model": "plane",
+        "material": "tv",
+        "disableShadow": true,
+        "position": {
+          "x": 0.18139280089717236,
+          "y": 1,
+          "z": -2.0623712489927053
+        },
+        "rotation": { "x": 0, "y": 180, "z": 0 },
+        "scale": { "x": 0.3, "y": 0.4, "z": 0.4 },
+        "meshOrder": 2
+      }
+    ],
+    "entities": [
+      {
+        "id": "door1",
+        "model": "plane",
+        "material": "golddoor",
+        "trigger": "door",
+        "map": "Shop",
+        "disableShadow": true,
+        "position": {
+          "x": 3,
+          "y": 0.9,
+          "z": -2.9000000000000004
+        },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 0.3, "y": 0.3, "z": 0.3 }
+      },
+      {
+        "id": "door2",
+        "model": "plane",
+        "material": "lobbydoor",
+        "trigger": "door",
+        "disableShadow": true,
+        "map": "Lobby",
+        "position": {
+          "x": -2.3000000000000003,
+          "y": 1.1,
+          "z": -2.9000000000000004
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": -0.45,
+          "y": 0.45,
+          "z": 0.45
+        }
+      },
+      {
+        "id": "door3",
+        "model": "plane",
+        "material": "rottendoor",
+        "trigger": "door",
+        "disableShadow": true,
+        "map": "Shower",
+        "position": { "x": -3.9, "y": 1, "z": 0.2 },
+        "rotation": { "x": 0, "y": 90, "z": 0 },
+        "scale": { "x": 0.3, "y": 0.3, "z": 0.3 }
+      }
+    ],
+    "characters": [
+      {
+        "model": "plane",
+        "material": "gerantIdle",
+        "name": "gerant",
+        "id": "gerant",
+        "trigger": "dialog",
+        "dialog": "gerantDialog",
+        "lines": [
+          {
+            "portrait": "sprites/portrait.png",
+            "fr": "eh bah tiens un ptit nouveau à la gleep gym",
+            "en": "oh a new face at the gleep gym"
+          },
+          {
+            "portrait": "sprites/portrait.png",
+            "fr": "t'es surement completement débousollé mais tinquietes francis va te montrer un peu comment ca se passe, interface de minijeu coulisse au prochain clic....",
+            "en": "you must be completely lost but don't worry francis will show you how it works, minigame interface, please show up on the screen at the user's next click...."
+          },
+          {
+            "trigger": "tutoQuest"
+          }
+        ],
+        "position": {
+          "x": 1.2000000000000002,
+          "y": 0.73,
+          "z": -0.9
+        },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 0.25, "y": 0.25, "z": 0.25 }
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+<style>
+    .plane {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/plane/background.png');
+        background-size: cover;
+        image-rendering: pixelated;
+        animation: sky forwards 40s;
+    }
+
+    .plane__plane {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: transform 800ms;
+        transform-origin: bottom;
+    }
+
+    .plane__character {
+        margin-bottom: -0.5rem;
+        transform-origin: bottom;
+        transition: transform 300ms;
+    }
+
+    .plane__character-left {
+        transition: transform 1500ms;
+        transform: translate(-10rem, 35vh) rotate(360deg) !important;
+    }
+
+    .plane__character-right {
+        transition: transform 1500ms;
+        transform: translate(10rem, 35vh) rotate(360deg) !important;
+    }
+
+
+    .plane__help {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 20%;
+    }
+
+    @keyframes sky {
+        0% {
+            background-position: 0 100%;
+        }
+
+        100% {
+            background-position: 0 0;
+        }
+    }
+</style>
+
+<div class="plane">
+    <div class="plane__plane">
+        <img draggable="false" src="assets/sprites/minigames/plane/character.png" alt="personne sur avion"
+            class="plane__character">
+        <img draggable="false" src="assets/sprites/minigames/plane/plane.png" alt="grand avion" class="plane__avion">
+    </div>
+    <img draggable="false" src="assets/sprites/minigames/plane/mouseIndication.gif" alt="grand avion"
+        class="plane__help">
+</div>

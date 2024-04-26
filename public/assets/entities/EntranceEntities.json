@@ -1,0 +1,151 @@
+{
+  "cameraPos": { "x": -4.5, "y": 1.85, "z": 2.5 },
+  "mapPos": { "x": 43.5, "y": 68 },
+  "cameraRot": {
+    "x": -0.5465152168457076,
+    "y": -0.7760267390922149,
+    "z": -0.40280010362863855
+  },
+  "materials": {
+    "wood": { "map": "wood.png" },
+    "door": {
+      "map": "lobbydoorClosed.png",
+      "wrap": { "x": 1, "y": 1 },
+      "transparent": true
+    }
+  },
+  "videos": [
+    {
+      "name": "gleepHuman"
+    }
+  ],
+  "models": [
+    { "name": "plant" },
+    { "name": "plane" },
+    { "name": "EntranceRoom" },
+    { "name": "distributeur" },
+    { "name": "corner" }
+  ],
+  "playerSpawn": {
+    "x": -0.17518898224145701,
+    "y": 0.67,
+    "z": 2.545307876429084
+  },
+  "entities": {
+    "layout": [
+      {
+        "model": "plant",
+        "position": {
+          "x": 3.3000000000000003,
+          "y": 0.1,
+          "z": 2.6
+        },
+        "rotation": {
+          "x": 0,
+          "y": -0.2910541257729215,
+          "z": 0
+        },
+        "meshOrder": 10
+      },
+      {
+        "model": "distributeur",
+        "position": {
+          "x": -4.4,
+          "y": 0.2,
+          "z": -2.7
+        },
+        "rotation": {
+          "x": 0,
+          "y": 80.3948069757024195,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "corner",
+        "position": {
+          "x": 4.7,
+          "y": 0,
+          "z": -0.25176451429205926
+        },
+        "rotation": {
+          "x": 0,
+          "y": 180,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "EntranceRoom",
+        "map": "EntranceCorridor",
+        "position": {
+          "x": 0,
+          "y": 0.2,
+          "z": 0
+        }
+      }
+    ],
+    "entities": [
+      {
+        "model": "plane",
+        "material": "door",
+        "trigger": "door",
+        "map": "EntranceCorridor",
+        "position": {
+          "x": -0.1,
+          "y": 1,
+          "z": -2.9500000000000006
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.5149331319816284,
+          "y": 0.3232016153471662,
+          "z": 0.5
+        }
+      }
+    ],
+    "characters": [
+      {
+        "model": "plane",
+        "material": "gleepHuman",
+        "trigger": "dialog",
+        "id": "gleep",
+        "dialog": "gleepIdle",
+        "lines": [
+          {
+            "portrait": "sprites/portrait.png",
+            "fr": "non je n ai plus rien à te dire!! j attends le prochain humain assez idiot qui pourrait se presenter ici dans cet evident piege !",
+            "en": "nno i have nothing more to say to you!! i am waiting for the next human stupid enough to show up here in this obvious trap!"
+          }
+        ],
+        "position": {
+          "x": 3.4322410953614177,
+          "y": 1.3,
+          "z": -0.17531846674175175
+        },
+        "rotation": {
+          "x": 0,
+          "y": -90,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.45,
+          "y": 0.35,
+          "z": 0.2
+        }
+      }
+    ]
+  }
+}

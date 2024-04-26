@@ -1,0 +1,119 @@
+{
+  "backtrack": "Entrance",
+  "playerSpawn": {
+    "x": 6.9666324162651625,
+    "y": 0.67,
+    "z": 0.07019238886156876
+  },
+  "mapPos": { "x": 43.5, "y": 63 },
+  "cameraPos": { "x": 7, "y": 1.5, "z": 3 },
+  "cameraRot": {
+    "x": -0.1298952604777952,
+    "y": 0.6908037290621017,
+    "z": 0.08304089688533911
+  },
+  "materials": {
+    "wood": { "map": "wood.png" },
+    "door": { "map": "lobbydoorClosed.png", "wrap": { "x": 1, "y": 1 } },
+    "paintingSorci": { "map": "paintingSorci.png", "wrap": { "x": 1, "y": 1 } }
+  },
+  "models": [
+    { "name": "EntranceCorridorRoom" },
+    { "name": "plane" },
+    { "name": "plant" }
+  ],
+  "videos": [{ "name": "lostGleepBounce" }, { "name": "greenGleepBounce" }],
+  "entities": {
+    "layout": [
+      {
+        "model": "EntranceCorridorRoom",
+        "position": {
+          "x": 0,
+          "y": 0.2,
+          "z": 0
+        }
+      },
+      {
+        "model": "plant",
+        "position": {
+          "x": -7.8860208000974685,
+          "y": 0.2,
+          "z": -2.2459304103951867
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "plant",
+        "position": {
+          "x": -7.8860208000974685,
+          "y": 0.2,
+          "z": 2.2459304103951867
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "plane",
+        "material": "paintingSorci",
+        "position": {
+          "x": 6.7,
+          "y": 1.4000000000000001,
+          "z": -2.75
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.00023924596203935044,
+          "z": 0.03490658503988659
+        },
+        "scale": {
+          "x": 0.25787315660745136,
+          "y": 0.2,
+          "z": 0.2
+        },
+        "disableShadow": true
+      }
+    ],
+    "entities": [
+      {
+        "model": "plane",
+        "material": "door",
+        "trigger": "door",
+        "map": "Office",
+        "position": {
+          "x": -9.3,
+          "y": 1.1,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 90,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.2999877517714868,
+          "y": 0.3773323187527291,
+          "z": 0.5
+        }
+      }
+    ],
+    "characters": [
+    ]
+  }
+}

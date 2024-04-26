@@ -1,0 +1,119 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Jockey One", sans-serif;
+  overflow: hidden;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100vw;
+  display: block;
+  image-rendering: pixelated;
+  user-select: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+html,
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  user-select: none;
+  aspect-ratio: 16 / 9;
+  -webkit-font-smoothing: never;
+  font-smooth: never;
+  text-rendering: geometricPrecision;
+  cursor: url("../assets/sprites/cursor.cur"), default;
+  -webkit-print-color-adjust: exact;
+  background-color: #000;
+  color: #fff;
+}
+
+body {
+  &:before {
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    opacity: 0;
+    background-color: #000;
+    transition: opacity 2800ms;
+    z-index: 10000;
+    pointer-events: none;
+  }
+  &.flash {
+    &:before {
+      content: "";
+      opacity: 1;
+    }
+  }
+}
+
+a {
+  cursor: url("../assets/sprites/pointer.cur"), pointer;
+}
+use {
+  pointer-events: none;
+}
+
+ul {
+  padding-inline-start: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}

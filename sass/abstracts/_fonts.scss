@@ -1,0 +1,24 @@
+@use "functions" as *;
+@import url("https://fonts.googleapis.com/css2?family=Jockey+One&display=swap");
+$fonts: (
+  ff: (),
+  w: (
+    thin: 100,
+    light: 300,
+    regular: 400,
+    bold: 800
+  )
+);
+
+$type-scale: (
+  small: (
+    200: 0.5vh,
+    300: 1vh,
+    400: 1.5vh,
+    500: 2vh,
+    600: 3vh,
+    700: 4vh,
+    800: 5vh,
+    900: 6.5vh
+  )
+);

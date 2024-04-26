@@ -1,0 +1,412 @@
+@use "../abstracts/" as *;
+.hub {
+    @include flex(center, center, row);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    image-rendering: pixelated;
+    overflow: hidden;
+    cursor: crosshair;
+    background-image: url("../assets/sprites/hudBackground.jpg");
+    background-size: 25vw 25vw;
+    color: #20f2ff;
+    text-shadow: #20f2ff 1px 0 10px;
+    animation: hubBackground 20s linear infinite;
+    transition: transform 5000ms;
+    transform-origin: left;
+    aspect-ratio: 16 / 9;
+    isolation: isolate;
+
+    &::after {
+        content: "";
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: url("../assets/sprites/hud.png");
+        background-size: 100% 100%;
+        pointer-events: none;
+    }
+
+    &__gagzoom {
+        transform: scale(2.2) translateY(12vw) translateX(22vw) rotate(-90deg);
+    }
+
+    &__power {
+        position: fixed;
+        left: 1%;
+        top: 13%;
+        height: 85vh !important;
+        width: 10vw;
+        transform: scaleX(1.25);
+        pointer-events: none;
+        background-image: url(../assets/sprites/power.svg);
+        background-size: 100% 100%;
+        z-index: -1;
+    }
+
+    &__time {
+        position: absolute;
+        z-index: 10;
+        right: 4%;
+        bottom: 28.5%;
+        width: 6.5%;
+        font-family: "digitalseven", sans-serif;
+        font-size: 1.5vw;
+    }
+
+    &__temperature {
+        position: absolute;
+        right: 7%;
+        bottom: 12.5%;
+        font-size: 2.25rem;
+        z-index: 10;
+        font-family: "digitalseven", sans-serif;
+    }
+
+    &__weather {
+        position: absolute;
+        font-family: "digitalseven", sans-serif;
+        text-align: right;
+        right: 3.5%;
+        width: 7%;
+        bottom: 46%;
+        z-index: 10;
+        &-img {
+            z-index: -1;
+            position: absolute;
+            transform: scale(0.7) translateX(-25%);
+        }
+    }
+
+    &__game {
+        position: absolute;
+        width: 74%;
+        height: 86.75%;
+        transform: translateY(-2%);
+        border-radius: 2rem;
+        background-image: url("../assets/sprites/textures/background.png");
+        background-size: 50vw 100vh;
+        animation: hubBackground 25s linear infinite;
+
+        &::before {
+            content: "";
+            position: fixed;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            transition: transform 500ms;
+            z-index: 100;
+            pointer-events: none;
+            transform-origin: right;
+            transform: scaleX(0);
+        }
+
+        &.fade {
+            &::before {
+                transform-origin: left;
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    &__location {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 3rem;
+    }
+
+    &__quest {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 60vw;
+        height: 60vh;
+        aspect-ratio: 1.7 / 1;
+        background-image: url("../assets/sprites/questBox.png");
+        background-size: 100% 100%;
+        z-index: 10;
+        cursor: default;
+        @include flex(center, center, row);
+        transition:
+            transform 500ms,
+            opacity 0s;
+        &.hide {
+            opacity: 0;
+            transform: scale(0);
+            transition:
+                transform 500ms,
+                opacity 0s 500ms;
+        }
+
+        &-dialog {
+            min-height: 30%;
+        }
+
+        &-card {
+            position: absolute;
+            left: 16%;
+            top: 28%;
+            width: 30%;
+            @include flex(center, flex-start, column);
+        }
+        &-start {
+            background: url("../assets/sprites/button.png");
+            background-size: 100% 100%;
+            border: none;
+            width: 60%;
+            height: 25%;
+            font-size: 1.5rem;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+            padding: 1.5rem;
+            color: #fff;
+        }
+        &-profile {
+            width: 48%;
+            height: 100%;
+            color: #fff;
+        }
+        &-name {
+            font-size: 2rem;
+            width: 70%;
+            text-align: left;
+        }
+        &-portrait {
+            width: 55%;
+        }
+        &-infos {
+            @include flex(flex-start, flex-start, column);
+            width: 100%;
+        }
+
+        &-lore {
+            width: 48%;
+            height: 100%;
+            color: #fff;
+            font-size: 1.5rem;
+            @include flex(center, flex-start, column);
+        }
+        &-menu {
+            width: 94%;
+            height: 75%;
+            border-radius: 1rem;
+            @include flex(center, flex-start, column);
+            gap: 1rem;
+            text-align: left;
+        }
+        &-start {
+            width: 60%;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+
+            transition: opacity 500ms;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        &-close {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            width: 15%;
+            height: 15%;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+        }
+    }
+
+    &__shop {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 60vw;
+        height: 60vh;
+        aspect-ratio: 1.7 / 1;
+        background-image: url("../assets/sprites/shopUi.png");
+        background-size: 100% 100%;
+        z-index: 10;
+        cursor: default;
+        padding-bottom: 3%;
+        padding-top: 5%;
+        @include flex(center, center, column);
+        transition:
+            transform 500ms,
+            opacity 0s;
+        &.hide {
+            opacity: 0;
+            transform: scale(0);
+            transition:
+                transform 500ms,
+                opacity 0s 500ms;
+        }
+        &-vignette {
+            pointer-events: none;
+        }
+        &-play {
+            background: url("../assets/sprites/button.png");
+            background-size: 100% 100%;
+            border: none;
+            width: 60%;
+            height: 25%;
+            font-size: 1.5rem;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+            padding: 1.5rem;
+            color: #fff;
+        }
+        &-games {
+            @include flex(center, center, row);
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+            width: 80%;
+            overflow: auto;
+            padding-left: 10%;
+        }
+        &-item {
+            position: relative;
+        }
+        &-checkbox {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            opacity: 0;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+
+            &:checked {
+                & ~ span {
+                    opacity: 0.7;
+                }
+                & ~ img {
+                    opacity: 0.7;
+                }
+            }
+        }
+        &-close {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            width: 15%;
+            height: 15%;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+        }
+    }
+
+    &__backtrack {
+        position: absolute;
+        bottom: 10%;
+        right: 15%;
+        width: fit-content;
+        font-size: 4rem;
+        cursor: url("../assets/sprites/pointer.cur"), pointer;
+
+        margin: auto;
+        transition: transform 500ms;
+
+        &:hover {
+            transform: translateY(2vh);
+        }
+    }
+
+    &__dialog {
+        position: absolute;
+        bottom: 6%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 58vw;
+        height: 16vh;
+        aspect-ratio: 1.7 / 1;
+        color: #ffffff;
+        cursor: url("../assets/sprites/pointer.cur"), pointer;
+
+        border-bottom: none;
+        background-image: url("../assets/sprites/dialogBox.png");
+        background-size: 100% 100%;
+        transform-origin: bottom;
+        @include flex(center, center, row);
+        transition:
+            transform 500ms,
+            opacity 0s;
+
+        &.hide {
+            opacity: 0;
+            transform: translateY(100%);
+            transition:
+                transform 500ms,
+                opacity 0s 500ms;
+        }
+
+        gap: 1rem;
+        z-index: 0;
+        text-align: left;
+        & * {
+            pointer-events: none;
+        }
+
+        &.hide {
+            transform: scaleY(0);
+        }
+
+        &-portrait {
+            height: 55%;
+            aspect-ratio: 1/1;
+        }
+        &-text {
+            width: 85%;
+            height: 60%;
+            font-size: 1.5rem;
+            &::after {
+                content: "▾";
+                font-size: 2.2rem;
+                position: absolute;
+                bottom: 13%;
+                right: 4%;
+            }
+        }
+    }
+
+    &__objective {
+        display: block;
+        position: absolute;
+        left: 1%;
+        top: 1%;
+        @include flex(flex-start, center, row);
+        padding-left: 5%;
+        background-image: url("../assets/sprites/hudObjective.png");
+        background-size: 100% 100%;
+        color: #20f2ff;
+        width: 40vw;
+        height: 12vh;
+        z-index: 10;
+    }
+
+    &__minimap {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 25vw;
+        z-index: 10;
+        height: 35vh;
+        background-image: url("../assets/sprites/map.png");
+        background-size: 100% 100%;
+
+        &-player {
+            position: absolute;
+            width: 0.3rem;
+            height: 0.3rem;
+            border-radius: 2rem;
+            transition:
+                top 3000ms ease,
+                left 3000ms ease;
+            background-color: #c3daf5;
+        }
+    }
+
+    @keyframes hubBackground {
+        from {
+            background-position: 0rem, 0;
+        }
+        to {
+            background-position: 100vw, 0;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+<style>
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/form/background.jpg');
+        background-size: 100% 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000000;
+        cursor: none;
+        image-rendering: pixelated;
+    }
+
+    .form input {
+        background: transparent;
+        outline: none;
+        border: solid 1px #000;
+        cursor: none;
+    }
+
+    .form label {
+        cursor: none;
+    }
+
+    .form__form {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        width: 45%;
+        height: 95%;
+        padding-top: 5%;
+        gap: 5%;
+        background-image: url('assets/sprites/minigames/form/form.jpg');
+        background-size: 100% 100%;
+        font-size: 0.7rem;
+    }
+
+    .form__title {
+        font-size: 1.5rem;
+    }
+
+    .form__pen {
+        position: absolute;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    .form__canvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: transparent;
+        pointer-events: none;
+    }
+
+    .form__question {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-wrap: wrap;
+        z-index: 70%;
+        gap: 0.5rem;
+    }
+
+    .form__signature {
+        width: 80%;
+        height: 2.5rem;
+        padding: 0.5rem;
+    }
+
+    .form__square {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .form__name {
+        width: 50%;
+        height: 2rem;
+        padding: 0.5rem;
+    }
+
+    .form__hands {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        z-index: 20;
+        animation: floating 5s infinite;
+    }
+
+    label {
+        width: 100%;
+    }
+</style>
+
+<div class="form">
+    <div class="form__form">
+        <h2 class="form__title">Application Form</h2>
+        <div class="form__question">
+            <label>What is your name ?</label>
+            <input class="form__name" type="text">
+        </div>
+        <div class="form__question">
+            <label>Do you accept the conditions?</label>
+            <span>yes i do</span>
+            <input type="text" class="form__square">
+            <input type="text" class="form__square">
+            <span>Yes.</span>
+        </div>
+        <div class="form__question">
+            <label>Do you want a gleep gym shirt? (500$*)</label>
+            <span>yes i do</span>
+            <input type="text" class="form__square">
+            <input type="text" class="form__square">
+            <span>Yes, please.</span>
+        </div>
+        <div class="form__question">
+            <label>Sign here:</label>
+            <input type="text" class="form__signature">
+        </div>
+    </div>
+    <img draggable="false" src="assets/sprites/minigames/form/stylo.png" alt="STYLO MIAMO ?" class="form__pen">
+    <img draggable="false" src="assets/sprites/minigames/form/handshake.png" alt="STYLO MIAMO ?"
+        class="form__hands hide">
+    <canvas class="form__canvas"></canvas>
+</div>

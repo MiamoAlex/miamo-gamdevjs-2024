@@ -1,0 +1,210 @@
+{
+  "backtrack": "Lobby",
+  "playerSpawn": {
+    "x": 1.4681365763870264,
+    "y": 0.6600008255133386,
+    "z": 1.7623649202739569
+  },
+  "mapPos": { "x": 29, "y": 32 },
+  "cameraPos": { "x": 2, "y": 2, "z": 3 },
+  "ost": "music/gleepGymFast",
+  "videos": [
+    { "name": "coolGrandma" },
+    { "name": "coolGrandmaBounce" },
+    { "name": "coolGrandmaSlow" },
+    { "name": "slavGrandmaIdle" },
+    { "name": "slavGrandmaBounce" },
+    { "name": "slavGrandmaSlow" }
+  ],
+  "cameraRot": {
+    "x": -0.4104874887490684,
+    "y": 0.43664327420481525,
+    "z": 0.1820137457649138
+  },
+  "materials": {
+    "wood": { "map": "wood.png" },
+    "door": { "map": "door.jpg", "wrap": { "x": 1, "y": 1 } },
+    "zaza": { "map": "paintingZaza.png", "wrap": { "x": 1, "y": 1 } },
+    "funster": { "map": "paintingFunster.png", "wrap": { "x": 1, "y": 1 } }
+  },
+  "models": [
+    { "name": "plane" },
+    { "name": "GrandmaRoom" },
+    { "name": "Disco" },
+    { "name": "Jukebox" },
+    { "name": "DiscoCorner" }
+  ],
+  "background": "grandmasky.jpg",
+  "entities": {
+    "layout": [
+      {
+        "model": "GrandmaRoom",
+        "position": {
+          "x": 0,
+          "y": 0.2,
+          "z": 0
+        }
+      },
+      {
+        "model": "DiscoCorner",
+        "position": {
+          "x": -2.2,
+          "y": 0.2,
+          "z": -1.7000000000000002
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "Disco",
+        "id": "disco",
+        "position": {
+          "x": -0.2,
+          "y": 2.5,
+          "z": -0.8
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.7781891953335244,
+          "y": 0.7781891953335244,
+          "z": 0.7781891953335244
+        }
+      },
+      {
+        "model": "Jukebox",
+        "id": "jukebox",
+        "position": {
+          "x": -3.7,
+          "y": 0.2,
+          "z": 1.4000000000000001
+        },
+        "rotation": {
+          "x": 0,
+          "y": 8.14620067008262005,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.693586657931356,
+          "y": 0.693586657931356,
+          "z": 0.693586657931356
+        }
+      },
+      {
+        "model": "plane",
+        "material": "zaza",
+        "position": {
+          "x": 2.8000000000000003,
+          "y": 1.3,
+          "z": -2.9000000000000004
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.05483113556160754,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.3464933696758725,
+          "y": 0.23120844172360375,
+          "z": 0.4
+        },
+        "disableShadow": true
+      },
+      {
+        "model": "plane",
+        "material": "funster",
+        "position": {
+          "x": -1.2000000000000002,
+          "y": 1.4000000000000001,
+          "z": -2.9000000000000004
+        },
+        "rotation": {
+          "x": -0.00008783314273655485,
+          "y": 0.0009529446085719808,
+          "z": 6.59191058004680502
+        },
+        "scale": {
+          "x": -0.2052778117956898,
+          "y": 0.23179383504913212,
+          "z": 0.4
+        },
+        "disableShadow": true
+      }
+    ],
+    "entities": [],
+    "characters": [
+      {
+        "model": "plane",
+        "material": "coolGrandmaBounce",
+        "id": "coolGrandma",
+        "position": {
+          "x": -2,
+          "y": 1.3,
+          "z": -1
+        },
+        "rotation": {
+          "x": 0,
+          "y": 45.141592653589793,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.4
+        },
+        "trigger": "dialog",
+        "dialog": "grandmaIdle",
+        "lines": [
+          {
+            "portrait": "sprites/portrait.png",
+            "fr": "olala mon petit bonbon rose, il faut vraiment qu'on y aille plus doucement sur la musique mon ne dos tient plus",
+            "en": "ooohh my little pink candy, we really need to slow down on the music my back can't take it anymore"
+          }
+        ]
+      },
+      {
+        "model": "plane",
+        "material": "slavGrandmaBounce",
+        "id": "slavGrandma",
+        "name": "slavgranny",
+        "trigger": "quest",
+        "ennemy": "slavgranny",
+        "minigames": [
+          "WordSoup",
+          "PuzzleTime",
+          "PapyPrison",
+          "FourGaming",
+          "Hiker",
+          "HorseTower"
+        ],
+        "style": "grandma",
+        "position": {
+          "x": 2.5,
+          "y": 1.1,
+          "z": 0
+        },
+        "rotation": {
+          "x": -0.008208210694093821,
+          "y": -0.043759296024681385,
+          "z": 0.0053828116020870585
+        },
+        "scale": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.4
+        }
+      }
+    ]
+  }
+}

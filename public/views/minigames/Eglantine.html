@@ -1,0 +1,60 @@
+<style>
+    .eglantine {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: bottom;
+        gap: 3rem;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/eglantine/bg.png');
+        background-size: 100% 100%;
+    }
+
+    .eglantine__eglantine {
+        position: absolute;
+        z-index: 10;
+        pointer-events: none;
+        width: 25%;
+        left: 5%;
+        bottom: 5%;
+    }
+
+    .eglantine__explosion {
+        position: absolute;
+        width: 14%;
+    }
+
+    .eglantine__bomb {
+        position: absolute;
+        z-index: 10;
+        left: 10%;
+        bottom: 10%;
+    }
+
+    .eglantine__trap {
+        position: absolute;
+        z-index: 10;
+        cursor: url("../assets/sprites/pointer.cur"), pointer;
+    }
+
+    .trap1 {}
+</style>
+
+<div class="eglantine">
+    <img class="eglantine__eglantine" src="assets/sprites/minigames/eglantine/eglantine.png" alt="eglantine"
+        draggable="false">
+    <img class="eglantine__bomb" src="assets/sprites/minigames/eglantine/bomb.png" alt="boombe" draggable="false">
+
+    <img style="left: 26%;top: 41%;" class="eglantine__trap" src="assets/sprites/minigames/eglantine/trap.png"
+        alt="eglantine" draggable="false">
+    <img style="left: 38%;top: 64%;" class="eglantine__trap" src="assets/sprites/minigames/eglantine/trap.png"
+        alt="eglantine" draggable="false">
+    <img style="left: 61%;top: 42%;" class="eglantine__trap" src="assets/sprites/minigames/eglantine/trap.png"
+        alt="eglantine" draggable="false">
+    <img style="left: 80%;top: 60%;" class="eglantine__trap" src="assets/sprites/minigames/eglantine/trap.png"
+        alt="eglantine" draggable="false">
+    <img style="left: 60%; top: 80%;" class="eglantine__trap" src="assets/sprites/minigames/eglantine/trap.png"
+        alt="eglantine" draggable="false">
+</div>

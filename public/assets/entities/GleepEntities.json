@@ -1,0 +1,121 @@
+{
+  "backtrack": "Lobby",
+  "ost": "music/gleepGymAlien",
+  "playerSpawn": { "x": 0, "y": 0.67, "z": 0 },
+  "mapPos": { "x": 65, "y": 46 },
+  "cameraPos": { "x": 2, "y": 2, "z": 3 },
+  "videos": [
+    { "name": "greenGleepBounce" },
+    { "name": "lostGleepBounce" },
+    { "name": "gangGleepBounce" }
+  ],
+  "x": -0.33685774597539403,
+  "y": 0.5253458158571891,
+  "z": 0.173859073663826,
+  "cameraRot": {
+    "x": -0.4104874887490684,
+    "y": 0.43664327420481525,
+    "z": 0.1820137457649138
+  },
+  "materials": {
+    "wood": { "map": "wood.png" },
+    "door": { "map": "door.jpg", "wrap": { "x": 1, "y": 1 } }
+  },
+  "models": [{ "name": "plane" }, { "name": "GleepRoom" }],
+  "background": "stars.jpg",
+  "entities": {
+    "layout": [
+      {
+        "model": "GleepRoom",
+        "position": {
+          "x": 0,
+          "y": 0.2,
+          "z": 0
+        }
+      },
+      {
+        "model": "plane",
+        "material": "greenGleepBounce",
+        "position": {
+          "x": -8,
+          "y": 3.2,
+          "z": -6.7
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.7853981633974483,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.4
+        },
+        "ignoresRaycast": true
+      }
+    ],
+    "entities": [],
+    "characters": [
+      {
+        "model": "plane",
+        "material": "gangGleepBounce",
+        "name": "gleepGang",
+        "id": "gleepGang",
+        "trigger": "quest",
+        "ennemy": "gleepGang",
+        "minigames": [
+          "Levers",
+          "SpaceCow",
+          "DopeOMax",
+          "SpaceRace",
+          "HomeDestroyer",
+          "SpaceWash"
+        ],
+        "style": "gleep",
+        "position": {
+          "x": -1.9000000000000001,
+          "y": 0.9,
+          "z": 1.4000000000000001
+        },
+        "rotation": {
+          "x": 0,
+          "y": 50.2290672788368107,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.3000348082711868,
+          "y": 0.2858204737549261,
+          "z": 0.4
+        }
+      },
+      {
+        "model": "plane",
+        "material": "lostGleepBounce",
+        "trigger": "dialog",
+        "dialog": "gleepIdle2",
+        "lines": [
+          {
+            "portrait": "sprites/portrait.png",
+            "fr": "⎍⋏ ⊑⎍⋔⏃⟟⋏ ?? ⋉⌰⏃⏚⟟⏚⌰⍜⏚⏃⌖? ⋉⟟⌿⟟ ⋉⏃⌿",
+            "en": "⏃ ⊑⎍⋔⏃⋏ ?? ?☌⌰⍜⍀⏚⍜⌖ ☌⌰⟟⏚⟟⌿ ☌⌰⏃⌿"
+          }
+        ],
+        "position": {
+          "x": 2.9000000000000004,
+          "y": 0.8,
+          "z": -1.6
+        },
+        "rotation": {
+          "x": -0.0001523087098933543,
+          "y": 0.006092348395734172,
+          "z": 0.0001523087098933543
+        },
+        "scale": {
+          "x": 0.3008536978422828,
+          "y": 0.25339251771004095,
+          "z": 0.4
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+<style>
+    .puzzletime {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/puzzletime/bg.jpg');
+        background-size: 100% 100%;
+    }
+
+    .puzzletime__items {
+        width: 10%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/puzzletime/fg.gif');
+        background-size: 100% 100%;
+        position: absolute;
+        top: 0;
+        left: 21%;
+        gap: 1rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .puzzletime__puzzle {
+        width: 38%;
+        height: 66%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: absolute;
+        right: 18%;
+        top: 27%;
+        transform: scale(0.72);
+    }
+
+    .puzzletime__slot {
+        width: 50%;
+        height: 50%;
+        transform: scale(1.7);
+        background-repeat: no-repeat;
+    }
+
+    [data-item="topright"] {
+        background-position: top right;
+        background-size: 83%;
+    }
+    [data-item="bottomright"] {
+        background-position: bottom right;
+        background-size: 99%;
+    }
+    [data-item="bottomleft"] {
+        background-position: bottom left;
+        background-size: contain;
+    }
+    [data-item="topleft"] {
+        background-position: top left;
+        background-size: contain;
+        background-size: 99%;
+    }
+</style>
+
+<div class="puzzletime">
+    <div class="puzzletime__items">
+        <img id="bottomleft" src="assets/sprites/minigames/puzzletime/2_bottomleft.png" alt="piece"
+            class="puzzletime__piece">
+        <img id="bottomright" src="assets/sprites/minigames/puzzletime/2_bottomright.png" alt="piece"
+            class="puzzletime__piece">
+        <img id="topleft" src="assets/sprites/minigames/puzzletime/2_topleft.png" alt="piece" class="puzzletime__piece">
+        <img id="topright" src="assets/sprites/minigames/puzzletime/2_topright.png" alt="piece"
+            class="puzzletime__piece">
+    </div>
+    <div class="puzzletime__puzzle">
+        <div class="puzzletime__slot" data-item="topleft"></div>
+        <div class="puzzletime__slot" data-item="topright"></div>
+        <div class="puzzletime__slot" data-item="bottomleft"></div>
+        <div class="puzzletime__slot puzzletime__decaler" data-item="bottomright"></div>
+    </div>
+</div>

@@ -1,0 +1,758 @@
+@use "../abstracts/" as *;
+@font-face {
+    font-family: "digitalseven";
+    src: url("../assets/fonts/digital7.woff") format("woff");
+}
+.minigame {
+    @include flex(center, center, row);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--clr-miamo-white);
+    text-align: center;
+    image-rendering: pixelated;
+    background-image: url("../assets/sprites/textures/sky.jpg");
+    background-size: 50vw 100vh;
+    image-rendering: pixelated;
+    animation: hubBackground 40s linear infinite;
+    transition: transform 900ms ease-in-out;
+    user-select: none;
+    isolation: isolate;
+
+    &__zoom {
+        transform: scale(1.65);
+    }
+
+    &__unzoom {
+        // transform: scale(0.6);
+    }
+
+    &__canvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -3;
+    }
+
+    &__core {
+        background-color: var(--clr-miamo-white);
+        position: relative;
+    }
+
+    & .minigame__message {
+        position: absolute;
+        top: 0;
+        font-size: 3rem;
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/sprites/textures/quadrillage.jpg");
+        background-size: 101% 101%;
+        text-align: center;
+        z-index: 50;
+        @include flex(center, center, row);
+    }
+
+    & .minigame__ending {
+        font-family: "Comic Sans MS", cursive;
+        position: fixed;
+        inset: 0;
+        background-color: #fff;
+        color: #000;
+        z-index: 100;
+        transition: opacity 3500ms;
+    }
+
+    & .minigame__ending.hide .minigame__ending-ranking {
+        transform: translateX(60vw);
+    }
+
+    & .minigame__ending-ranking {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 15%;
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
+        @include flex(center, center, column);
+        font-size: 1.5rem;
+        color: #000;
+        padding: 1rem;
+        font-size: 2rem;
+        transition: transform 2500ms 3500ms;
+    }
+    & .minigame__ending-img {
+        transform: translateX(-15vw);
+        height: 100%;
+        z-index: 10;
+    }
+    & .minigame__ending-start {
+        z-index: 11;
+    }
+    & .minigame__ending-idle {
+        z-index: 12;
+    }
+    & .minigame__ending-img,
+    & .minigame__ending-start,
+    & .minigame__ending-idle {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: translateX(-15vw);
+        height: 100%;
+    }
+    & .minigame__ending-rank {
+        width: 100%;
+    }
+
+    &__chronometre {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        width: 8.5%;
+        font-size: 1.5rem;
+        aspect-ratio: 1 / 1;
+        @include flex(center, center, row);
+        color: #000;
+        padding-top: 0.5rem;
+        background-image: url("../assets/sprites/chrono.png");
+        background-size: 100% 100%;
+        transform: rotate(-10deg);
+    }
+
+    &__target {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    &__decoration {
+        width: 25%;
+    }
+
+    &__theater {
+        position: absolute;
+        @include flex(space-around, flex-end, row);
+        padding-bottom: 5%;
+        gap: 40%;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    &__back {
+        position: absolute;
+        width: 150%;
+        height: 18%;
+        bottom: 0;
+        transform: skew(-15deg);
+        z-index: -2;
+    }
+
+    &__game {
+        width: 55vw;
+        max-width: 50rem;
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 16 / 9;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+    }
+
+    &__tuto {
+        color: #0f0;
+        & .minigame__core {
+            font-family: "digitalseven", sans-serif;
+            @include flex(center, center, column);
+            gap: 0.5rem;
+            background: url("../assets/sprites/textures/metal.jpg");
+            background-size: 100% 100%;
+            padding: 1rem;
+            &::before {
+                content: "";
+                position: absolute;
+                background: url("../assets/sprites/tvStand.png");
+                background-size: 100% 100%;
+                width: 20vw;
+                height: 20vh;
+                z-index: 0;
+                bottom: -32%;
+            }
+        }
+        & .minigame__back {
+            background-image: url("../assets/sprites/textures/background.png");
+        }
+        & .minigame__game {
+            background-color: #000;
+        }
+        & .minigame__stats {
+            width: 100%;
+            @include flex(flex-start, center, row);
+            gap: 1rem;
+            height: 15%;
+            font-size: 2rem;
+        }
+        & .minigame__heart {
+            height: 100%;
+            width: 25%;
+        }
+        & .minigame__progress {
+            background-image: url("../assets/sprites/textures/quadrillageSmall.jpg");
+            width: 22%;
+            height: 4rem;
+            font-size: 3.5rem;
+            @include flex(center, center, row);
+        }
+
+        & .minigame__ending {
+            @include flex(center, center, column);
+            gap: 1rem;
+            font-size: 1.3rem;
+        }
+
+        & .minigame__ending-quit,
+        & .minigame__ending-retry {
+            padding: 0.5rem;
+            border: solid rgb(0, 0, 0) 1px;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+        }
+
+        & .minigame__ending-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        &.minigame__Win {
+            // color: #ca9631 !important;
+        }
+
+        &.minigame__Lose {
+            // color: #ca3131 !important;
+        }
+
+        & .minigame__lives {
+            background-image: url("../assets/sprites/textures/quadrillageSmall.jpg");
+            width: 76%;
+            height: 4rem;
+            @include flex(center, center, row);
+        }
+        & .minigame__objective {
+            width: 100%;
+            height: 2rem;
+            background-image: url("../assets/sprites/textures/quadrillageSmall.jpg");
+            text-align: left;
+            padding-left: 1rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    &__wizard {
+        background-image: url("../assets/sprites/textures/wizardSky.png");
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            background-image: url("../assets/sprites/wizard/screen.gif");
+            background-size: 100% 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        color: #fff;
+        & .minigame__core {
+            font-family: "Comic Sans MS", cursive;
+            @include flex(center, center, column);
+            gap: 0.5rem;
+            background-size: 100% 100%;
+            padding: 1rem;
+            background: transparent;
+        }
+        & .minigame__back {
+            background-image: url("../assets/sprites/textures/brick.jpg");
+        }
+        & .minigame__game {
+            transform: scale(0.85);
+            background-color: #000;
+        }
+        & .minigame__stats {
+            background-image: url("../assets/sprites/wizard/stats.png");
+            background-size: 100% 100%;
+            position: absolute;
+            width: 15%;
+            @include flex(flex-start, center, column);
+            gap: 2rem;
+            height: 100%;
+            left: -20%;
+            font-size: 2rem;
+            z-index: 10;
+        }
+        & .minigame__heart {
+            height: 100%;
+            width: 100%;
+        }
+        & .minigame__progress {
+            width: 30%;
+            height: 24%;
+            font-size: 2rem;
+            @include flex(center, center, row);
+        }
+        & .minigame__ending {
+            @include flex(center, center, column);
+            gap: 1rem;
+            font-size: 1.3rem;
+        }
+
+        & .minigame__ending-quit,
+        & .minigame__ending-retry {
+            padding: 0.5rem;
+            border: solid rgb(0, 0, 0) 1px;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+        }
+
+        & .minigame__ending-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        & .minigame__lives {
+            width: 70%;
+            height: 60%;
+            @include flex(center, center, column);
+        }
+        & .minigame__objective {
+            width: 100%;
+            height: 12rem;
+            position: absolute;
+            background-image: url("../assets/sprites/wizard/objective.gif");
+            background-size: 100% 100%;
+            text-align: center;
+            font-size: 1.2rem;
+            bottom: -35%;
+            z-index: 1;
+            padding-bottom: 5%;
+            @include flex(center, center, column);
+        }
+    }
+
+    &__lobby {
+        &::after {
+            content: "";
+            position: absolute;
+            width: 55%;
+            height: 55%;
+            background-image: url("../assets/sprites/lobby/tv.png");
+            background-size: 100% 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        color: #fff;
+        & .minigame__core {
+            @include flex(center, center, column);
+            gap: 0.5rem;
+            background-size: 100% 100%;
+            padding: 1rem;
+            background: transparent;
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url("../assets/sprites/lobby/weather.png");
+                background-size: 40rem 100%;
+                animation: slide 70s linear infinite;
+                width: 55vw;
+                height: 70%;
+                bottom: 0;
+                margin: auto;
+                top: 0;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                background-image: url(../assets/sprites/lobby/stockMarket.png);
+                background-size: 40rem 100%;
+                animation: slide 50s linear reverse infinite;
+                width: 45vw;
+                bottom: -10%;
+                height: 2rem;
+                right: -23%;
+            }
+        }
+        & .minigame__back {
+            background-image: url("../assets/sprites/textures/background.png");
+        }
+        & .minigame__game {
+            background-color: #000;
+            width: 35vw;
+            height: 35vh;
+            border: ridge #fff;
+        }
+        & .minigame__stats {
+            position: absolute;
+            @include flex(flex-start, center, row);
+            width: 60%;
+            gap: 1rem;
+            top: -14%;
+            right: 0%;
+            font-size: 2rem;
+            z-index: 10;
+            color: #000;
+        }
+        & .minigame__heart {
+            height: 100%;
+            width: 100%;
+        }
+        & .minigame__progress {
+            width: 30%;
+            height: 24%;
+            font-size: 2rem;
+            @include flex(center, center, row);
+        }
+
+        & .minigame__ending {
+            @include flex(center, center, column);
+            gap: 1rem;
+            font-size: 1.3rem;
+        }
+
+        & .minigame__ending-quit,
+        & .minigame__ending-retry {
+            padding: 0.5rem;
+            border: solid rgb(0, 0, 0) 1px;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+        }
+
+        & .minigame__ending-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        & .minigame__lives {
+            width: 70%;
+            height: 30%;
+            @include flex(center, center, row);
+        }
+        & .minigame__objective {
+            width: 100%;
+            height: 3rem;
+            position: absolute;
+            background-image: url("../assets/sprites/lobby/bandeau.png");
+            background-size: 100% 100%;
+            text-align: center;
+            font-size: 1.2rem;
+            bottom: -12%;
+            left: -22.25%;
+            z-index: 1;
+            color: #000;
+            padding-left: 1rem;
+            @include flex(flex-start, center, row);
+        }
+    }
+
+    &__coach {
+        color: #e7ede7;
+        background-image: url("../assets/sprites/textures/coachSky.png");
+        & .minigame__core {
+            @include flex(center, center, column);
+            gap: 0.5rem;
+            background-color: transparent;
+            background-size: 100% 100%;
+            padding: 1rem;
+            &::before {
+                content: "";
+                position: absolute;
+                background: url("../assets/sprites/coach/colonne.png");
+                background-size: 100% 100%;
+                width: 20vw;
+                height: 55vh;
+                z-index: 0;
+                bottom: -30vh;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(../assets/sprites/coach/tabletteEcran.png);
+                background-size: 100% 100%;
+                width: 45vw;
+                height: 59vh;
+                z-index: 0;
+                bottom: -10vh;
+                pointer-events: none;
+            }
+        }
+        & .minigame__back {
+            background-image: url("../assets/sprites/textures/marble.png");
+        }
+        & .minigame__game {
+            background-color: #000;
+            width: 31vw;
+            height: 40vh;
+        }
+        & .minigame__stats {
+            width: 100%;
+            @include flex(flex-start, center, row);
+            gap: 1rem;
+            height: 15%;
+            font-size: 1.5rem;
+            position: absolute;
+        }
+        & .minigame__heart {
+            height: 100%;
+            width: 25%;
+        }
+        & .minigame__progress {
+            width: 30%;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            position: absolute;
+            color: #fff;
+            right: 18%;
+            bottom: -22.5vh;
+            z-index: 10;
+        }
+
+        & .minigame__ending {
+            @include flex(center, center, column);
+            gap: 1rem;
+            font-size: 1.3rem;
+        }
+
+        & .minigame__ending-quit,
+        & .minigame__ending-retry {
+            padding: 0.5rem;
+            border: solid rgb(0, 0, 0) 1px;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+        }
+
+        & .minigame__ending-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        &.minigame__Win {
+            // color: #ca9631 !important;
+        }
+
+        &.minigame__Lose {
+            // color: #ca3131 !important;
+        }
+
+        & .minigame__lives {
+            width: 55%;
+            height: 4rem;
+            @include flex(center, center, column);
+            position: absolute;
+            z-index: 10;
+            right: -11vw;
+            top: -10vh;
+        }
+        & .minigame__objective {
+            width: 100%;
+            height: 4rem;
+            line-height: 4rem;
+            text-align: left;
+            padding-left: 1rem;
+            font-size: 1rem;
+            position: absolute;
+            bottom: -4vh;
+            left: -2%;
+            background-color: #000;
+        }
+    }
+
+    &__grandma {
+        color: #e7ede7;
+        background-image: url("../assets/sprites/textures/grannySky.png");
+        & .minigame__core {
+            @include flex(center, center, column);
+            gap: 0.5rem;
+            background-color: transparent;
+            background-size: 100% 100%;
+            padding: 1rem;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(../assets/sprites/grandma/tele.png);
+                background-size: 100% 100%;
+                width: 47.5vw;
+                height: 61vh;
+                z-index: 10;
+                left: -7.5vw;
+                bottom: -11vh;
+                pointer-events: none;
+            }
+        }
+        & .minigame__back {
+            background-image: url("../assets/sprites/textures/disco.png");
+        }
+        & .minigame__game {
+            background-color: #000;
+            width: 31vw;
+            height: 40vh;
+            transform: scale(0.975) translateX(-14%) translateY(10%);
+        }
+        & .minigame__stats {
+            width: 100%;
+            @include flex(flex-start, center, row);
+            gap: 1rem;
+            height: 15%;
+            font-size: 1.5rem;
+            position: absolute;
+        }
+        & .minigame__heart {
+            height: 100%;
+            width: 25%;
+        }
+        & .minigame__progress {
+            width: 22%;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            position: absolute;
+            color: #fff;
+            right: -17%;
+            top: -13vh;
+            z-index: 11;
+        }
+
+        & .minigame__ending {
+            @include flex(center, center, column);
+            gap: 1rem;
+            font-size: 1.3rem;
+        }
+
+        & .minigame__ending-quit,
+        & .minigame__ending-retry {
+            padding: 0.5rem;
+            border: solid rgb(0, 0, 0) 1px;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+        }
+
+        & .minigame__ending-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        & .minigame__lives {
+            width: 55%;
+            height: 4rem;
+            @include flex(center, center, column);
+            position: absolute;
+            z-index: 11;
+            right: -9vw;
+            bottom: -10vh;
+        }
+        & .minigame__objective {
+            width: 93%;
+            height: 4rem;
+            line-height: 5rem;
+            text-align: left;
+            padding-left: 1rem;
+            font-size: 1rem;
+            position: absolute;
+            text-align: center;
+            top: 1vh;
+            left: -11%;
+            z-index: 1;
+            background-color: #000;
+        }
+    }
+
+    &__gleep {
+        color: #fff;
+        background-image: url("../assets/sprites/textures/grannySky.png");
+
+        & .minigame__core {
+            font-family: "digitalseven", sans-serif;
+            @include flex(center, center, column);
+            gap: 0.5rem;
+            background: url("../assets/sprites/gleep/haut.png");
+            background-size: 100% 100%;
+            padding: 1rem;
+            &::before {
+                content: "";
+                position: absolute;
+                background: url("../assets/sprites/gleep/bas.png");
+                background-size: 100% 100%;
+                width: 20vw;
+                height: 21vh;
+                z-index: 0;
+                bottom: -36%;
+            }
+        }
+        & .minigame__back {
+            background-image: url("../assets/sprites/textures/metal.png");
+        }
+        & .minigame__game {
+            background-color: #000;
+        }
+        & .minigame__stats {
+            width: 100%;
+            @include flex(flex-start, center, row);
+            gap: 1rem;
+            height: 15%;
+            font-size: 2rem;
+        }
+        & .minigame__heart {
+            height: 100%;
+            width: 25%;
+        }
+        & .minigame__progress {
+            background-image: url("../assets/sprites/textures/quadrillageSmall.jpg");
+            width: 30%;
+            height: 4rem;
+            font-size: 3.5rem;
+            @include flex(center, center, row);
+        }
+
+        & .minigame__ending {
+            @include flex(center, center, column);
+            gap: 1rem;
+            font-size: 1.3rem;
+        }
+
+        & .minigame__ending-quit,
+        & .minigame__ending-retry {
+            padding: 0.5rem;
+            border: solid #000 1px;
+            cursor: url("../assets/sprites/pointer.cur"), pointer;
+        }
+
+        & .minigame__ending-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        & .minigame__lives {
+            background-image: url("../assets/sprites/textures/quadrillageSmall.jpg");
+            width: 70%;
+            height: 4rem;
+            @include flex(center, center, row);
+        }
+        & .minigame__objective {
+            width: 100%;
+            height: 2rem;
+            background-image: url("../assets/sprites/textures/quadrillageSmall.jpg");
+            text-align: left;
+            padding-left: 1rem;
+            font-size: 1.3rem;
+        }
+    }
+}

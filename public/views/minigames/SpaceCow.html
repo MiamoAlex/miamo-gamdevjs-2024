@@ -1,0 +1,61 @@
+<style>
+    .spacecow {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/spacecow/background.jpg');
+        background-size: 100% 100%;
+        isolation: isolate;
+    }
+
+    .spacecow__spaceship {
+        position: absolute;
+        right: 4%;
+        top: 5%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        isolation: isolate;
+        flex-direction: column;
+        transition: transform 2300ms;
+    }
+    .spacecow__spaceship.moving .spacecow__spaceship-beam{
+        opacity: 0;
+    }
+
+    .moving {
+        transform: translateX(-200%);
+    }
+
+    .spacecow__spaceship-beam {
+        margin-top: -1rem;
+        z-index: -1;
+        transition: opacity 3700ms 800ms;
+        opacity: 1;
+    }
+
+    .gone {
+        transform: translateY(-200%);
+    }
+
+    .spacecow__cow {
+        position: absolute;
+        right: 15%;
+        bottom: 8%;
+        z-index: -1;
+        width: 20%;
+    }
+</style>
+
+<div class="spacecow">
+    <div class="spacecow__spaceship moving">
+        <img src="assets/sprites/minigames/spacecow/ufo.png" alt="gleep" class="spacecow__spaceship-ufo" draggable="false">
+        <img src="assets/sprites/minigames/spacecow/beam.png" alt="zglurp" class="spacecow__spaceship-beam" draggable="false">
+    </div>
+
+    <img src="assets/sprites/minigames/spacecow/cow.png" alt="meow" class="spacecow__cow" draggable="false">
+</div>

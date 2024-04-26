@@ -1,0 +1,172 @@
+{
+  "backtrack": "Lobby",
+  "playerSpawn": {
+    "x": -0.043302911709034636,
+    "y": 0.6610722606709057,
+    "z": 1.8668205567325151
+  },
+  "mapPos": { "x": 45, "y": 33 },
+  "cameraPos": { "x": 0, "y": 2, "z": 3 },
+  "ost": "music/gleepGymCoach",
+  "videos": [{ "name": "coachIdle" }, { "name": "solidGalIdle" }],
+  "cameraRot": {
+    "x": -0.49002076306944703,
+    "y": -0.008823296013992744,
+    "z": -0.00470638101416029
+  },
+  "background": "hell.jpg",
+  "materials": {
+    "wood": { "map": "wood.png" },
+    "door": { "map": "door.jpg", "wrap": { "x": 1, "y": 1 } }
+  },
+  "models": [
+    { "name": "plane" },
+    { "name": "CoachRoom" },
+    { "name": "Pillar" }
+  ],
+  "entities": {
+    "layout": [
+      {
+        "model": "CoachRoom",
+        "position": {
+          "x": 0,
+          "y": 0.2,
+          "z": -1.5
+        }
+      },
+      {
+        "model": "Pillar",
+        "position": {
+          "x": -1.6,
+          "y": 0.2,
+          "z": 0.5
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "Pillar",
+        "position": {
+          "x": 1.6,
+          "y": 0.2,
+          "z": 0.5
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "Pillar",
+        "position": {
+          "x": -1.6,
+          "y": 0.2,
+          "z": -5.5
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "Pillar",
+        "position": {
+          "x": 1.6,
+          "y": 0.2,
+          "z": -5.5
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    ],
+    "entities": [],
+    "characters": [
+      {
+        "model": "plane",
+        "material": "solidGalIdle",
+        "id": "solidGal",
+        "position": {
+          "x": 1.4000000000000001,
+          "y": 1.1,
+          "z": -1.2000000000000002
+        },
+        "rotation": {
+          "x": 0,
+          "y": 3.141592653589793,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.35,
+          "y": 0.35,
+          "z": 0.35
+        }
+      },
+      {
+        "model": "plane",
+        "material": "coachIdle",
+        "id": "coach",
+        "name": "coach",
+        "trigger": "quest",
+        "ennemy": "coach",
+        "minigames": [
+          "YogaFly",
+          "Sisyphus",
+          "Eglantine",
+          "Truck", 
+          "PushUp",
+          "Levers",
+          "SpaceRace",
+          "HorseTower",
+          "Potion",
+          "Gems",
+          "Gorilla",
+          "Mystic"
+        ],
+        "style": "coach",
+        "position": {
+          "x": 0,
+          "y": 1.2,
+          "z": -1.3
+        },
+        "rotation": {
+          "x": -0.008726646259971648,
+          "y": 0.3490658503988659,
+          "z": 0.008726646259971648
+        },
+        "scale": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.4
+        }
+      }
+    ]
+  }
+}

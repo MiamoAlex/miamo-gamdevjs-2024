@@ -1,0 +1,79 @@
+<style>
+    .yogafly {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/sprites/minigames/yogafly/background.jpg');
+        background-size: 100% 100%;
+        isolation: isolate;
+        cursor: none;
+    }
+
+    .yogafly * {
+        cursor: none;
+    }
+
+    .yogafly__homme {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+        bottom: 10%;
+        z-index: -1;
+        width: 30%;
+    }
+
+    .yogafly__tapette {
+        position: absolute;
+        pointer-events: none;
+        z-index: 10;
+        transform-origin: bottom left;
+        transition: transform 200ms;
+    }
+
+    .yogafly__tapette-hit {
+        transform: rotate(15deg);
+    }
+
+    .yogafly__fly {
+        position: absolute;
+    }
+
+    .yogafly__left {
+        animation: flyleft 5s forwards;
+        transform: scaleX(-1);
+    }
+
+    .yogafly__right {
+        animation: flyright 5s forwards;
+    }
+
+    @keyframes flyleft {
+        0% {
+            left: -20%;
+        }
+
+        100% {
+            left: 40%;
+        }
+    }
+
+    @keyframes flyright {
+        0% {
+            right: -20%;
+        }
+
+        100% {
+            right: 40%;
+        }
+    }
+</style>
+
+<div class="yogafly">
+    <img src="assets/sprites/minigames/yogafly/homme.png" alt="meow" class="yogafly__homme" draggable="false">
+    <img src="assets/sprites/minigames/yogafly/tapette.png" alt="meow" class="yogafly__tapette" draggable="false">
+</div>

@@ -1,0 +1,346 @@
+{
+  "backtrack": "Office",
+  "mapPos": { "x": 43, "y": 45 },
+  "playerSpawn": {
+    "x": 0.03454888089561878,
+    "y": 0.67,
+    "z": 2.843995720492259
+  },
+  "cameraPos": { "x": 0, "y": 4, "z": 7 },
+  "cameraRot": {
+    "x": -0.36000010453497283,
+    "y": 0.0007452797081776499,
+    "z": 0.00028052546304704315
+  },
+  "videos": [{ "name": "torch" }, { "name": "stef" }, { "name": "mysterious" }],
+  "materials": {
+    "wood": { "map": "wood.png" },
+    "door": { "map": "door.jpg", "wrap": { "x": 1, "y": 1 } },
+    "boussole": {
+      "map": "boussole.png",
+      "wrap": { "x": 1, "y": 1 },
+      "transparent": true
+    },
+    "coachdoor": {
+      "map": "coachdoor.png",
+      "transparent": true,
+      "wrap": { "x": 1, "y": 1 }
+    },
+    "gleepdoor": { "map": "gleepdoor.png", "wrap": { "x": 1, "y": 1 } },
+    "grandmadoor": { "map": "grandmadoor.png", "wrap": { "x": 1, "y": 1 } },
+    "wizarddoor": { "map": "wizarddoor.png", "wrap": { "x": 1, "y": 1 } }
+  },
+  "models": [
+    { "name": "LobbyRoom" },
+    { "name": "plane" },
+    { "name": "boxingSack" },
+    { "name": "dumbBell" },
+    { "name": "plant" },
+    { "name": "distributeur" }
+  ],
+  "entities": {
+    "layout": [
+      {
+        "model": "LobbyRoom",
+        "position": {
+          "x": 0,
+          "y": 0.2,
+          "z": 0
+        }
+      },
+      {
+        "model": "plane",
+        "material": "torch",
+        "disableShadow": true,
+        "position": {
+          "x": -2,
+          "y": 1.4000000000000001,
+          "z": -2.7
+        },
+        "rotation": {
+          "x": 0,
+          "y": 8.68803569581883e-7,
+          "z": 0
+        },
+        "scale": {
+          "x": -0.24535799968531619,
+          "y": 0.22273485459184966,
+          "z": 0.3
+        }
+      },
+      {
+        "model": "plane",
+        "material": "torch",
+        "disableShadow": true,
+        "position": {
+          "x": 1.7,
+          "y": 1.4000000000000001,
+          "z": -2.7
+        },
+        "rotation": {
+          "x": 0,
+          "y": 8.68803569581883e-7,
+          "z": 0
+        },
+        "scale": {
+          "x": -0.24535799968531619,
+          "y": 0.22273485459184966,
+          "z": 0.3
+        }
+      },
+      {
+        "model": "plane",
+        "material": "boussole",
+        "disableShadow": true,
+        "position": {
+          "x": -0.30000000000000004,
+          "y": 0.225,
+          "z": 1.50000000000000004
+        },
+        "rotation": {
+          "x": 90,
+          "y": 2.7755575615628914e-17,
+          "z": 180
+        },
+        "scale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        }
+      },
+      {
+        "model": "dumbBell",
+        "position": {
+          "x": 2.3000000000000003,
+          "y": 0.2,
+          "z": -1.8
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.14,
+          "y": 0.14,
+          "z": 0.14
+        }
+      },
+      {
+        "model": "plant",
+        "position": {
+          "x": -10.4,
+          "y": 0.1,
+          "z": -3.5
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.8418269969737576,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "plant",
+        "position": {
+          "x": 10.4,
+          "y": 0.1,
+          "z": -3.5
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.8418269969737576,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "plant",
+        "position": {
+          "x": 10.4,
+          "y": 0.1,
+          "z": 4.5
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.8418269969737576,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "plant",
+        "position": {
+          "x": -10.4,
+          "y": 0.1,
+          "z": 2.5
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.8418269969737576,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      {
+        "model": "distributeur",
+        "position": {
+          "x": -3.5,
+          "y": 0.2,
+          "z": -3.2
+        },
+
+        "rotation": {
+          "x": 0,
+          "y": 80.403154083231312,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    ],
+    "entities": [
+      {
+        "id": "doorCoach",
+        "model": "plane",
+        "material": "coachdoor",
+        "trigger": "door",
+        "map": "Coach",
+        "disableShadow": true,
+        "position": {
+          "x": -0.1,
+          "y": 1.1,
+          "z": -2.7
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.00004977877776294245,
+          "z": 0
+        },
+        "scale": {
+          "x": -0.4695093080010838,
+          "y": 0.36231132167239777,
+          "z": 0.3
+        }
+      },
+      {
+        "model": "plane",
+        "material": "grandmadoor",
+        "trigger": "door",
+        "map": "Grandma",
+        "disableShadow": true,
+        "position": {
+          "x": -6.18442132274132,
+          "y": 1.07,
+          "z": -3.9
+        },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 0.3, "y": 0.3, "z": 0.3 }
+      },
+      {
+        "id": "doorWizard",
+        "model": "plane",
+        "material": "wizarddoor",
+        "trigger": "door",
+        "map": "Wizard",
+        "disableShadow": true,
+        "position": {
+          "x": 5.534572273499323,
+          "y": 1.07,
+          "z": -3.9
+        },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 0.3, "y": 0.3, "z": 0.3 }
+      },
+      {
+        "model": "plane",
+        "material": "gleepdoor",
+        "trigger": "door",
+        "map": "Gleep",
+        "disableShadow": true,
+        "position": {
+          "x": 11.077,
+          "y": 1,
+          "z": 0.4561348822307741
+        },
+        "rotation": { "x": 0, "y": 90, "z": 0 },
+        "scale": { "x": 0.3, "y": 0.3, "z": 0.3 }
+      }
+    ],
+    "characters": [
+      {
+        "model": "plane",
+        "id": "trainer",
+        "name": "trainer",
+        "material": "stef",
+        "trigger": "quest",
+        "ennemy": "trainer",
+        "minigames": [
+          "Speech",
+          "Gorilla",
+          "Gems",
+          "Truck",
+          "LinkedIn",
+          "HeroFlying",
+          "Basket"
+        ],
+        "style": "lobby",
+        "position": {
+          "x": 3,
+          "y": 0.8,
+          "z": -1.5
+        },
+        "rotation": {
+          "x": -0.0001523087098933543,
+          "y": 0.006092348395734172,
+          "z": 0.0001523087098933543
+        },
+        "scale": {
+          "x": 0.25,
+          "y": 0.25,
+          "z": 0.25
+        }
+      },
+      {
+        "model": "plane",
+        "material": "mysterious",
+        "trigger": "audio",
+        "audio": "sfx/mystery",
+        "position": {
+          "x": -10.4,
+          "y": 0.7000000000000001,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 70.5707963267948966,
+          "z": 0
+        },
+        "scale": {
+          "x": 0.2,
+          "y": 0.2,
+          "z": 0.2
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "backtrack": "Lobby",
+  "ost": "music/gleepGymWizard",
+  "playerSpawn": {
+    "x": 0.23561621755151682,
+    "y": 0.6501731380859666,
+    "z": 2.2784302852121883
+  },
+  "mapPos": { "x": 57, "y": 34 },
+  "cameraPos": { "x": 2, "y": 2, "z": 3 },
+  "x": -0.33685774597539403,
+  "y": 0.5253458158571891,
+  "z": 0.173859073663826,
+  "cameraRot": {
+    "x": -0.4104874887490684,
+    "y": 0.43664327420481525,
+    "z": 0.1820137457649138
+  },
+  "videos": [{ "name": "pizza" }, { "name": "sorci" }, { "name": "bug" }],
+  "materials": {
+    "wood": { "map": "wood.png" },
+    "door": { "map": "door.jpg", "wrap": { "x": 1, "y": 1 } }
+  },
+  "models": [
+    { "name": "plane" },
+    { "name": "WizardRoom" },
+    { "name": "chaudron" }
+  ],
+  "background": "stars.jpg",
+  "entities": {
+    "layout": [
+      {
+        "model": "WizardRoom",
+        "position": {
+          "x": 0,
+          "y": 0.2,
+          "z": 0
+        }
+      },
+      {
+        "model": "chaudron",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1.2,
+          "y": 0.7,
+          "z": 1.2
+        }
+      }
+    ],
+    "entities": [],
+    "characters": [
+      {
+        "model": "plane",
+        "material": "bug",
+        "position": {
+          "x": -3.2,
+          "y": 1,
+          "z": 1.4000000000000001
+        },
+        "rotation": {
+          "x": -0.014165930459741401,
+          "y": 90.9534278666462148,
+          "z": 0.017293115105880386
+        },
+        "trigger": "dialog",
+        "id": "gleep",
+        "dialog": "bizaroid",
+        "lines": [
+          {
+            "portrait": "sprites/bizaroid.png",
+            "fr": "*vous ne comprenez pas ce que cette créature essaie de vous dire*",
+            "en": "*you can't make up what this creature is trying to tell you*"
+          }
+        ],
+        "scale": {
+          "x": 0.3068009528251982,
+          "y": 0.4,
+          "z": -0.4
+        }
+      },
+      {
+        "model": "plane",
+        "material": "pizza",
+        "position": {
+          "x": 3.1,
+          "y": 0.8,
+          "z": -2.6
+        },
+        "rotation": {
+          "x": -0.008726646259971648,
+          "y": 0.3490658503988659,
+          "z": 0.008726646259971648
+        },
+        "scale": {
+          "x": 0.4,
+          "y": 0.4,
+          "z": 0.4
+        },
+        "trigger": "dialog",
+        "dialog": "pizza",
+        "lines": [
+          {
+            "portrait": "sprites/portrait.png",
+            "fr": "HELLO !!! JE SUIS LE SORCIER PIZZA HATE QUE TU JOUES A MON QUIZ FATAL, PARLE DONC A SORCI DANS SON CHAUDRON SI TU VEUX PARTICIPER",
+            "en": "HELLO !!! I AM THE PIZZA WIZARD AND I CANT WAIT FOR YOU TO PLAY MY QUIZ, TALK TO THE WIZARD IN HIS CAULDRON IF YOU WANT TO PARTICIPATE"
+          }
+        ]
+      },
+      {
+        "model": "plane",
+        "material": "sorci",
+        "position": {
+          "x": 0.5,
+          "y": 1.7,
+          "z": 0
+        },
+        "rotation": {
+          "x": -0.008832436715846206,
+          "y": 35.38061122648223206,
+          "z": 0.00902310856788601
+        },
+        "scale": {
+          "x": 0.5505749975202899,
+          "y": 0.4,
+          "z": 0.4
+        },
+        "trigger": "quest",
+        "name": "sorci",
+        "ennemy": "sorci",
+        "minigames": [
+          "Swarm",
+          "SandwichPied",
+          "Potion",
+          "PizzaQuiz",
+          "IllustreJambon",
+          "VirtualHeadset",
+          "AppleWizard"
+        ],
+        "style": "wizard"
+      }
+    ]
+  }
+}
