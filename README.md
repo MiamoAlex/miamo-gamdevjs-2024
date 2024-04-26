@@ -7,13 +7,13 @@
 - Install three.js in the public folder (npm i three)
 - npm run start to start with webpack & compressed assets
 - npm run devstart to fast start
-- [text](http://localhost:3334/)
+- [Lancer projet](http://localhost:3334/)
 
 ## Credits
-- MiamoAlex [text](https://miamoalex.net/)
-- Rusalka [text](https://linktr.ee/Rusalkaaa)
-- Mo [text](https://www.instagram.com/01001101_01101111/)
-- Sukai [text](https://crylotte.neocities.org/)
+- MiamoAlex [Website](https://miamoalex.net/)
+- Rusalka [Linktree](https://linktr.ee/Rusalkaaa)
+- Mo [Instagram](https://www.instagram.com/01001101_01101111/)
+- Sukai [Website](https://crylotte.neocities.org/)
 
 ## Screenshots
 ![Screenshot 1](public/assets/screen1.png)
