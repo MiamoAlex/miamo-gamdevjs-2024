@@ -101,6 +101,8 @@ export class UiManager {
         clearInterval(this.interval);
         this.uiRenderer.getElement('main').scrollTop = 0;
         this.dataManager.saveData();
+        
+        document.querySelector('.animatedtextures').innerHTML = '';
 
         const animation = this.dataManager.animations[Math.floor(Math.random() * this.dataManager.animations.length)];
         const delay = transition ? animation.time : 0;
@@ -130,6 +132,7 @@ export class UiManager {
 
         this.currentLayout = view;
         this.currentData = data;
+
 
         setTimeout(async () => {
             if (this.currentController) {

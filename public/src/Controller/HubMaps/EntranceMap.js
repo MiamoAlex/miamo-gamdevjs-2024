@@ -55,7 +55,7 @@ export class EntranceMap extends HubMap {
                     {
                         portrait: "sprites/portrait.png",
                         npc: this.scene.getObjectByName('gleep'),
-                        fr: "tu souhaites nou rejoindre rejoindre pas vrai ? c est très simple, il te suffit de traverser le sas cosmique euh le couloir, et francis te guidera dans ton initiation",
+                        fr: "tu souhaites nou rejoindre pas vrai ? c est très simple, il te suffit de traverser le sas cosmique euh le couloir, et francis te guidera dans ton initiation",
                         en: "you want to join us? its pretty simple, you just got walk through the cosmic airlock, i mean the corridor, and francis will guide you through your initiation"
                     },
                     {

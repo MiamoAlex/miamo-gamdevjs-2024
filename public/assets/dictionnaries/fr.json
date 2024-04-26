@@ -62,7 +62,7 @@
   "grandmaStart": "LES DISCO GRANDMERES TE CHALLENGENT !!!",
   "grandmaWin": "GROOVY !!",
   "grandmaLose": "Courage..",
-  "gleepStart": "L'EMPIRE GLEEP TE DÉFIE !!!",
+  "gleepStart": "LE ROYAUME GLEEP TE DÉFIE !!!",
   "gleepWin": "VICTOIRE ASTRALE !!",
   "gleepLose": "ERREUR COSMIQUE",
   "wizardStart": "VOUS ETES PRIS DANS UN PIEGE MAGICO GOURMAND !!!!",
@@ -112,7 +112,7 @@
 
   "06": "OBJECTIVES",
   "welcomeGym": "Découvrir le batiment mysterieux où je suis....",
-  "meetupGym": "Rencontrer fabrice, le gérant de la salle Gleep Gym et s'inscrire",
+  "meetupGym": "Rencontrer francis, le gérant de la salle Gleep Gym et s'inscrire",
   "grindGym": "Explorer les recoins de la salle et s'entrainer auprès des coachs",
   "objectiveCoach": "Se rendre au coeur de la salle",
   "objectiveLoop": "Explorer librement la gleep gym !"

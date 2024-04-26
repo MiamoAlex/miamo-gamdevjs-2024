@@ -17,7 +17,7 @@ export class FormMinigame extends Minigame {
                     if (this.elements.length >= 4 && this.elements.includes(document.querySelector('.form__signature'))) {
                         clearInterval(this.timerInterval);
                         this.state = false;
-                        this.uiManager.audioManager.loadAudioFile('sfx/minigames/form/handshake', 'sfx', [], 1+ Math.random() * 0.2);
+                        this.uiManager.audioManager.loadAudioFile('sfx/minigames/form/handshake', 'sfx', [], 1 + Math.random() * 0.2);
                         document.querySelector('.form__hands').classList.remove('hide');
                         setTimeout(() => {
                             this.handleGameResult(true);
@@ -30,6 +30,7 @@ export class FormMinigame extends Minigame {
         this.canvas = document.querySelector('.form__canvas');
         this.ctx = this.canvas.getContext('2d');
         this.pen = document.querySelector('.form__pen')
+
         const rect = this.area.getBoundingClientRect();
         this.canvas.width = rect.width;
         this.canvas.height = rect.height;

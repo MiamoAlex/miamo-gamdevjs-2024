@@ -11,12 +11,12 @@ export class minigameController extends UiController {
 
     startTime = new Date();
 
-    minigames = ['Basket'];
+    // minigames = ['Form'];
     // minigames = ['Sisyphus', 'Gems', 'SpaceWash', 'HomeDestroyer', 'HorseTower', 'HeroFlying']
 
-    // minigames = ['Weights', 'Form', 'Mixer', 'Plane', 'VirtualHeadset',
-    //    'Gorilla', 'Speech', 'AppleWizard', 'Levers', 'SpaceCow', 'YogaFly', 'WordSoup', 'DopeOMax',
-    //    'Potion', 'Swarm', 'SpaceRace', 'PuzzleTime', 'PizzaQuiz', 'SandwichPied', 'IllustreJambon', 'Gems', 'SpaceWash', 'HomeDestroyer', 'HorseTower', 'HeroFlying', 'Sisyphus', 'PapyPrison', 'FourGaming', 'Hiker', 'PushUp', 'Signal', 'Truck'];
+    minigames = ['Weights', 'Form', 'Mixer', 'Plane', 'VirtualHeadset',
+       'Gorilla', 'Speech', 'AppleWizard', 'Levers', 'SpaceCow', 'YogaFly', 'WordSoup', 'DopeOMax',
+       'Potion', 'Swarm', 'SpaceRace', 'PuzzleTime', 'PizzaQuiz', 'SandwichPied', 'IllustreJambon', 'Gems', 'SpaceWash', 'HomeDestroyer', 'HorseTower', 'HeroFlying', 'Sisyphus', 'PapyPrison', 'FourGaming', 'Hiker', 'PushUp', 'Signal', 'Truck'];
 
     constructor(uiManager, data) {
         const domElements = {

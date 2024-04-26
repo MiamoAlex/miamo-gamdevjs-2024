@@ -32,7 +32,7 @@
     { "name": "GrandmaRoom" },
     { "name": "Disco" },
     { "name": "Jukebox" },
-    { "name": "DiscoCorner" }
+    { "name": "discoCorner" }
   ],
   "background": "grandmasky.jpg",
   "entities": {
@@ -46,7 +46,7 @@
         }
       },
       {
-        "model": "DiscoCorner",
+        "model": "discoCorner",
         "position": {
           "x": -2.2,
           "y": 0.2,

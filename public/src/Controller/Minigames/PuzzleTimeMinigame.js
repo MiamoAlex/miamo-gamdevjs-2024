@@ -13,7 +13,7 @@ export class PuzzleTimeMinigame extends Minigame {
 
         const random = Math.floor(Math.random() * 2) + 1;
         document.querySelectorAll('.puzzletime__piece').forEach((element) => {
-            element.src = element.src.replace('2', random);
+            // element.src = element.src.replace('2', random);
             element.draggable = true;
             element.addEventListener('dragstart', (ev) => this.dragStart(ev));
             element.addEventListener('dragover', (ev) => { this.dragOver(ev) });
