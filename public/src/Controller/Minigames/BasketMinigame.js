@@ -30,7 +30,7 @@ export class BasketMinigame extends Minigame {
                 clearInterval(this.timerInterval);
                 setTimeout(() => {
                     this.handleGameResult(true);
-                }, 3500);
+                }, 900);
             }
         }
     }

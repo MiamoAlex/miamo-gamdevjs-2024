@@ -36,7 +36,7 @@
     "socket-io": "^1.0.0",
     "socket.io": "^4.7.2",
     "three": "^0.149.0",
-    "webpack": "^5.89.0"
+    "webpack": "^5.91.0"
   },
   "devDependencies": {
     "webpack-cli": "^5.1.4"
